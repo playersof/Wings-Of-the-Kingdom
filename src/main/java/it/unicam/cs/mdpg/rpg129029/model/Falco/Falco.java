@@ -5,6 +5,9 @@ public abstract class Falco {
     private int fame;
     private int energia;
     private int addestramento;
+    private static final int MAX_STAT = 100;
+    private static final int MIN_STAT = 0;
+    private static final int MIN_ENERGIA_CACCIA = 30;
 
     public Falco (String nome, int fame, int energia, int addestramento){
         this.nome = nome;
@@ -33,30 +36,32 @@ public abstract class Falco {
         this.nome = nome;
     }
 
-    public void setFame(int fame) {
-        this.fame = fame;
+    public void diminuisciEnergia(int valore) {
+        this.energia = Math.max(MIN_STAT, energia - valore);
     }
 
-    public void setEnergia(int energia) {
-        this.energia = energia;
+    public void aumentaFame(int valore) {
+        this.fame = Math.min(MAX_STAT, fame + valore);
     }
 
-    public void setAddestramento(int addestramento) {
-        this.addestramento = addestramento;
+    public void aumentaAddestramento(int valore) {
+        this.addestramento = Math.min(MAX_STAT, addestramento + valore);
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public void nutri(){ this.fame= Math.max(MIN_STAT, this.fame - 10);}
+
+    public void riposa(){ this.energia = Math.min(MAX_STAT, energia+20);}
+
+    public void allena(){
+        aumentaAddestramento(5);
+        diminuisciEnergia(10);
+        aumentaFame(5);
     }
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
+    public boolean haEnergia() {
+        return energia >= MIN_ENERGIA_CACCIA;
     }
-
-    @Override
-    public String toString() {
-        return super.toString();
+    public boolean affamato() {
+        return fame >= 100;
     }
 }

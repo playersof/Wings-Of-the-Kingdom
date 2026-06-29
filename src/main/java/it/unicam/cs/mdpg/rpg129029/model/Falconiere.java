@@ -27,8 +27,8 @@ public class Falconiere {
         return missioniCompletate;
     }
 
-    public void setMissioniCompletate(int missioniCompletate) {
-        this.missioniCompletate = missioniCompletate;
+    public void incrementaMissioniCompletate() {
+        this.missioniCompletate += 1;
     }
 
     public Falco getFalco() {
