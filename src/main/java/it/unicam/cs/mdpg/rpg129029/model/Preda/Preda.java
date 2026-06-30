@@ -13,4 +13,11 @@ public abstract class Preda {
         this.fameGenerata= fame;
     }
 
+    public String getNome() { return nome; }
+
+    public int getDifficolta() { return difficolta; }
+
+    public int getEnergiaRichiesta() { return energiaRichiesta; }
+
+    public int getFameGenerata() { return fameGenerata; }
 }

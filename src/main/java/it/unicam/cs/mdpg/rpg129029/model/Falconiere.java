@@ -3,13 +3,32 @@ package it.unicam.cs.mdpg.rpg129029.model;
 import it.unicam.cs.mdpg.rpg129029.model.Falco.Falco;
 
 import java.util.Objects;
+/**
+ * Rappresenta il giocatore durante la partita, colui che prenderà le decisioni principali, scelgierà il suo falco ad inizio
+ * partita e ,alla fine se sarà tra i migliori,
+ * si ritroverà in classifica col suo relativo punteggio
+ */
 
 public class Falconiere {
+    private final int id;
     private String nome;
     private final Falco falco;
     private int missioniCompletate;
 
-    public Falconiere(String nome, Falco falco, int missioniCompletate){
+    /**
+     * Costruttore della classe Falconiere
+     * @param id del Falconiere
+     * @param nome del Falconiere
+     * @param falco del Falconiere scelto ad inizo gioco e che rimarrà fisso per tutta la partita, tramite il quale vengono affrontate le missioni
+     * @throws IllegalArgumentException se id è < 0
+     * @throws IllegalArgumentException se nome è null o lunghezza inferiore a 3
+     */
+    //Costruttore
+
+    public Falconiere(int id, String nome, Falco falco, int missioniCompletate){
+        if(id <= 0) throw new IllegalArgumentException("id non valido");
+        if(nome == null || nome.length() < 3 || nome.isBlank()) throw new IllegalArgumentException("Nome non valido");
+        this.id = id;
         this.nome = nome;
         this.falco = falco;
         this.missioniCompletate = missioniCompletate;
@@ -28,22 +47,27 @@ public class Falconiere {
     }
 
     public void incrementaMissioniCompletate() {
-        this.missioniCompletate += 1;
+        this.missioniCompletate++;
     }
 
-    public Falco getFalco() {
-        return falco;
-    }
+    public Falco getFalco() { return this.falco; }
 
+    public int getId(){ return this.id; }
+
+    /**
+     * Due Falconieri sono considerati uguali se hanno lo stesso id univoco.
+     */
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Falconiere that = (Falconiere) o;
-        return missioniCompletate == that.missioniCompletate && Objects.equals(nome, that.nome) && Objects.equals(falco, that.falco);
+        if(this == o) return true;
+        if (!(o instanceof Falconiere falconiere)) return false;
+        return id == falconiere.id;
     }
-
+    /**
+     * L'hashCode e' basato solo sull'id, coerente con equals.
+     */
     @Override
     public int hashCode() {
-        return Objects.hash(nome, falco, missioniCompletate);
+        return Objects.hashCode(id);
     }
 }
