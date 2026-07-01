@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update: modificate statistiche delle prede per la caccia, scrittura dei metodi per la classe Falco">
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update &amp; Fix:&#10;- Modificate classi Falconiere rivedendo equals e hashcode&#10;- Implementata classe Missione&#10;- Implementato costruttore e getter della classe Preda">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Azione/Addestra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Azione/Azione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Azione/Nutri.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Azione/Riposa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Missione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Missione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Preda/Preda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Preda/Preda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falco/Falco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falco/Falco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -145,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782752001295</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update &amp; Fix:&#10;- Modificate classi Falconiere rivedendo equals e hashcode&#10;- Implementata classe Missione&#10;- Implementato costruttore e getter della classe Preda">
+      <option name="closed" value="true" />
+      <created>1782816199934</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1782816199934</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +168,8 @@
     <MESSAGE value="Creazione delle classi principali per il gioco (Astratte e non):&#10;- Falco (con Pellegrino, Astore ed Harris)&#10;- Preda (con Quaglia, Coniglio, Volpe, Anatra)&#10;- Missione&#10;- Falconiere" />
     <MESSAGE value="Update:&#10;Modificate classi Falconiere e Missione, aggiunta classe Punteggio per poter salvare a fine partita il punteggio e visualizzare una classifica dei migliori 5 giocatori" />
     <MESSAGE value="Update: modificate statistiche delle prede per la caccia, scrittura dei metodi per la classe Falco" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update: modificate statistiche delle prede per la caccia, scrittura dei metodi per la classe Falco" />
+    <MESSAGE value="Update &amp; Fix:&#10;- Modificate classi Falconiere rivedendo equals e hashcode&#10;- Implementata classe Missione&#10;- Implementato costruttore e getter della classe Preda" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update &amp; Fix:&#10;- Modificate classi Falconiere rivedendo equals e hashcode&#10;- Implementata classe Missione&#10;- Implementato costruttore e getter della classe Preda" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

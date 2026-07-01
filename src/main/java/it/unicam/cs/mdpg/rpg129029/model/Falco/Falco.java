@@ -52,7 +52,7 @@ public abstract class Falco {
 
     public void riposa(){ this.energia = Math.min(MAX_STAT, energia+20);}
 
-    public void allena(){
+    public void addestra(){
         aumentaAddestramento(5);
         diminuisciEnergia(10);
         aumentaFame(5);
