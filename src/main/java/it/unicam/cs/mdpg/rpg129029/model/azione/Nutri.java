@@ -1,6 +1,6 @@
-package it.unicam.cs.mdpg.rpg129029.model.Azione;
+package it.unicam.cs.mdpg.rpg129029.model.azione;
 
-import it.unicam.cs.mdpg.rpg129029.model.Falco.Falco;
+import it.unicam.cs.mdpg.rpg129029.model.falco.Falco;
 
 public class Nutri implements Azione{
     @Override

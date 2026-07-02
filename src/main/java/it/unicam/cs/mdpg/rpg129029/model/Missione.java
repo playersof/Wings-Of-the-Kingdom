@@ -1,6 +1,6 @@
 package it.unicam.cs.mdpg.rpg129029.model;
 
-import it.unicam.cs.mdpg.rpg129029.model.Preda.Preda;
+import it.unicam.cs.mdpg.rpg129029.model.preda.Preda;
 
 import java.util.List;
 
@@ -35,4 +35,6 @@ public class Missione {
     public int getPredeCatturate() { return predeCatturate; }
 
     public int getId() { return id; }
+
+    public static int getNumPredePerMissione() { return NUM_PREDE_PER_MISSIONE; }
 }

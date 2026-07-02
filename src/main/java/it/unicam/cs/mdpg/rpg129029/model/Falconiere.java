@@ -1,6 +1,6 @@
 package it.unicam.cs.mdpg.rpg129029.model;
 
-import it.unicam.cs.mdpg.rpg129029.model.Falco.Falco;
+import it.unicam.cs.mdpg.rpg129029.model.falco.Falco;
 
 import java.util.Objects;
 /**
