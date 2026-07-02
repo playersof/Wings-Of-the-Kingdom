@@ -61,7 +61,5 @@ public abstract class Falco {
     public boolean haEnergia() {
         return energia >= MIN_ENERGIA_CACCIA;
     }
-    public boolean affamato() {
-        return fame >= 100;
-    }
+    public boolean haTroppaFame() { return fame >= 100; }
 }

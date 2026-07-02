@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update:&#10;- Implementata l'interfaccia Azione per l'estendibilità del codice (O/C principle)&#10;- Inizio implementazione GameControl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/GeneratoreMissioniCasuali.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" afterDir="false" />
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update &amp; Fix:&#10;- Implementata la classe GeneratreMissioniCasuali per permettere al gioco di generare le missioni in maniera randomica &#10;- Inizio implementazione ValutatoreCaccia tramite definizione della formula per il calcolo dell'esito della caccia&#10;- Aggiunta del metodo getNumPredePerMissione su Missione per comodità strutturale">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/FalcoFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Azione/Addestra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/azione/Addestra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Azione/Azione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/azione/Azione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Azione/Nutri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/azione/Nutri.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Azione/Riposa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/azione/Riposa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falco/Astore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Astore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falco/Falco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falco/Harris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Harris.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falco/Pellegrino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Pellegrino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Missione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Missione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Preda/Anatra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Anatra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Preda/Coniglio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Coniglio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Preda/Preda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Preda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Preda/Quaglia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Quaglia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Preda/Volpe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Volpe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782921919038</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update &amp; Fix:&#10;- Implementata la classe GeneratreMissioniCasuali per permettere al gioco di generare le missioni in maniera randomica &#10;- Inizio implementazione ValutatoreCaccia tramite definizione della formula per il calcolo dell'esito della caccia&#10;- Aggiunta del metodo getNumPredePerMissione su Missione per comodità strutturale">
+      <option name="closed" value="true" />
+      <created>1783017183297</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1783017183297</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +183,8 @@
     <MESSAGE value="Update: modificate statistiche delle prede per la caccia, scrittura dei metodi per la classe Falco" />
     <MESSAGE value="Update &amp; Fix:&#10;- Modificate classi Falconiere rivedendo equals e hashcode&#10;- Implementata classe Missione&#10;- Implementato costruttore e getter della classe Preda" />
     <MESSAGE value="Update:&#10;- Implementata l'interfaccia Azione per l'estendibilità del codice (O/C principle)&#10;- Inizio implementazione GameControl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update:&#10;- Implementata l'interfaccia Azione per l'estendibilità del codice (O/C principle)&#10;- Inizio implementazione GameControl" />
+    <MESSAGE value="Update &amp; Fix:&#10;- Implementata la classe GeneratreMissioniCasuali per permettere al gioco di generare le missioni in maniera randomica &#10;- Inizio implementazione ValutatoreCaccia tramite definizione della formula per il calcolo dell'esito della caccia&#10;- Aggiunta del metodo getNumPredePerMissione su Missione per comodità strutturale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update &amp; Fix:&#10;- Implementata la classe GeneratreMissioniCasuali per permettere al gioco di generare le missioni in maniera randomica &#10;- Inizio implementazione ValutatoreCaccia tramite definizione della formula per il calcolo dell'esito della caccia&#10;- Aggiunta del metodo getNumPredePerMissione su Missione per comodità strutturale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
