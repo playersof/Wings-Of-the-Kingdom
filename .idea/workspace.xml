@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update &amp; Fix:&#10;- Implementata la classe GeneratreMissioniCasuali per permettere al gioco di generare le missioni in maniera randomica &#10;- Inizio implementazione ValutatoreCaccia tramite definizione della formula per il calcolo dell'esito della caccia&#10;- Aggiunta del metodo getNumPredePerMissione su Missione per comodità strutturale">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/FalcoFactory.java" afterDir="false" />
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update &amp; Fix:&#10;- Implementata classe FalcoFactory per la creazione dei falchi ad inizio partita&#10;- Implementata ValutatoreCaccia con metodo valutaCaccia che calcola in base ad una formula l'esito dello scontro">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/persistence/PunteggioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/persistence/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/persistence/file/PunteggioRepositoryFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/persistence/json/GsonProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Punteggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Punteggio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783017183297</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update &amp; Fix:&#10;- Implementata classe FalcoFactory per la creazione dei falchi ad inizio partita&#10;- Implementata ValutatoreCaccia con metodo valutaCaccia che calcola in base ad una formula l'esito dello scontro">
+      <option name="closed" value="true" />
+      <created>1783032909656</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1783032909656</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +196,8 @@
     <MESSAGE value="Update &amp; Fix:&#10;- Modificate classi Falconiere rivedendo equals e hashcode&#10;- Implementata classe Missione&#10;- Implementato costruttore e getter della classe Preda" />
     <MESSAGE value="Update:&#10;- Implementata l'interfaccia Azione per l'estendibilità del codice (O/C principle)&#10;- Inizio implementazione GameControl" />
     <MESSAGE value="Update &amp; Fix:&#10;- Implementata la classe GeneratreMissioniCasuali per permettere al gioco di generare le missioni in maniera randomica &#10;- Inizio implementazione ValutatoreCaccia tramite definizione della formula per il calcolo dell'esito della caccia&#10;- Aggiunta del metodo getNumPredePerMissione su Missione per comodità strutturale" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update &amp; Fix:&#10;- Implementata la classe GeneratreMissioniCasuali per permettere al gioco di generare le missioni in maniera randomica &#10;- Inizio implementazione ValutatoreCaccia tramite definizione della formula per il calcolo dell'esito della caccia&#10;- Aggiunta del metodo getNumPredePerMissione su Missione per comodità strutturale" />
+    <MESSAGE value="Update &amp; Fix:&#10;- Implementata classe FalcoFactory per la creazione dei falchi ad inizio partita&#10;- Implementata ValutatoreCaccia con metodo valutaCaccia che calcola in base ad una formula l'esito dello scontro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update &amp; Fix:&#10;- Implementata classe FalcoFactory per la creazione dei falchi ad inizio partita&#10;- Implementata ValutatoreCaccia con metodo valutaCaccia che calcola in base ad una formula l'esito dello scontro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
