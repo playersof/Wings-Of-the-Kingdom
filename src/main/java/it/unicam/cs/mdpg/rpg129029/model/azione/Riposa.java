@@ -4,7 +4,5 @@ import it.unicam.cs.mdpg.rpg129029.model.falco.Falco;
 
 public class Riposa implements Azione{
     @Override
-    public void esegui(Falco falco){
-        falco.riposa();
-    }
+    public void esegui(Falco falco){ falco.riposa(); }
 }

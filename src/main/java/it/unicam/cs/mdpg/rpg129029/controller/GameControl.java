@@ -2,11 +2,15 @@ package it.unicam.cs.mdpg.rpg129029.controller;
 
 import it.unicam.cs.mdpg.rpg129029.model.Falconiere;
 import it.unicam.cs.mdpg.rpg129029.model.Missione;
+import it.unicam.cs.mdpg.rpg129029.model.Punteggio;
 import it.unicam.cs.mdpg.rpg129029.model.falco.Falco;
 import it.unicam.cs.mdpg.rpg129029.model.service.FalcoFactory;
 import it.unicam.cs.mdpg.rpg129029.model.service.GeneratoreMissioniCasuali;
 import it.unicam.cs.mdpg.rpg129029.model.service.ValutatoreCaccia;
-import it.unicam.cs.mdpg.rpg129029.persistence.PunteggioRepository;
+import it.unicam.cs.mdpg.rpg129029.persistence.ClassificaRepository;
+import it.unicam.cs.mdpg.rpg129029.persistence.file.ClassificaRepositoryFile;
+
+import java.util.UUID;
 
 /**
  * Mediatore tra la GUI e il resto dell'applicazione (model e persistence).
@@ -28,14 +32,17 @@ public class GameControl {
     private FalcoFactory falcoFactory;
 
 
-    public GameControl(PunteggioRepository punteggioRepository){
-        if(punteggioRepository == null) throw new NullPointerException("il parametro passato non può essere nullo");
+    public GameControl(ClassificaRepository classificaRepository) {
+        if (classificaRepository == null) throw new NullPointerException("il parametro passato non può essere nullo");
         this.generatoreMissioni = new GeneratoreMissioniCasuali();
         this.valutatoreCaccia = new ValutatoreCaccia();
         this.falcoFactory = new FalcoFactory();
     }
 
     //Metodi
+    public void inizioPartita(){
+        //this.falconiere = new Falconiere(UUID.randomUUID().toString(), nome, falco, missioniCompletate);
+    }
 
 
     private int missioniGiocate() {
