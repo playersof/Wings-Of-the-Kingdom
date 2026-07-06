@@ -10,6 +10,7 @@ import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ClassificaRepositoryFile implements ClassificaRepository {
     private  final Gson gson;
@@ -23,31 +24,25 @@ public class ClassificaRepositoryFile implements ClassificaRepository {
         this.tipoLista = new TypeToken<List<Punteggio>>(){}.getType();
     }
 
-// Salva
-//  - leggi tutto
-//  - aggiorni lista
-//  - riscrivi file
-// trovaTutti
-//    leggi file
-//    ritorna lista
-
 
     /**
+     * salva(...)
+     * Salva solo i 5 migliori punteggi attuali
      * @param punteggio
      */
     @Override
     public void salva(Punteggio punteggio) {
-        // salva funziona da creazione che da aggiornamento:
-
         List<Punteggio> tutti = new ArrayList<>(trovaTutti());
-        //tutti.removeIf(p -> p.getIdFalconiere().equals(punteggio.getIdFalconiere()));
-
         tutti.add(punteggio);
-        scriviGson(tutti);
+        List<Punteggio> top5 = tutti.stream()
+                        .sorted()
+                                .limit(5)
+                                        .collect(Collectors.toList());
+        scriviGson(top5);
     }
 
     /**
-     * @return
+     * @return tutti i punteggi salvati nel file
      */
     @Override
     public List<Punteggio> trovaTutti() {
@@ -66,6 +61,7 @@ public class ClassificaRepositoryFile implements ClassificaRepository {
             return new ArrayList<>();
         }
     }
+
 
     private void scriviGson(List<Punteggio> listaPunteggi){
         try (Writer writer = new BufferedWriter(new FileWriter(percorsoFile))) {

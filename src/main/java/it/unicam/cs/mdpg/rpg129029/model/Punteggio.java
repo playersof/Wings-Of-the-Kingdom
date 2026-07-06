@@ -1,6 +1,6 @@
 package it.unicam.cs.mdpg.rpg129029.model;
 
-public class Punteggio {
+public class Punteggio implements Comparable<Punteggio>{
         private final String idFalconiere;
         private final String nomeFalconiere;
         private final int missioniCompletate;
@@ -21,4 +21,17 @@ public class Punteggio {
         public int getMissioniCompletate() { return missioniCompletate; }
 
         public int getPredeCatturate() { return predeCatturate; }
+
+    /**
+     *
+     * @param altro the object da comparare.
+     * @return a partià di missioni completate la differenza tra le prede catturate
+     */
+        @Override
+        public int compareTo(Punteggio altro){
+            if(this.missioniCompletate != altro.missioniCompletate) {
+                return altro.missioniCompletate - this.missioniCompletate;
+            }
+            else return altro.predeCatturate - this.predeCatturate;
+        }
 }
