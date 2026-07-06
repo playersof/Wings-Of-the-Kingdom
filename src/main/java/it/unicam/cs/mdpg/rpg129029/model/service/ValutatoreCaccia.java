@@ -13,11 +13,7 @@ import java.util.Random;
  */
 public class ValutatoreCaccia {
     final Random random = new Random();
-    /**
-     * Punteggio falco = addestramento + energia/2 - fame/2
-     * Difficoltà effettiva preda = difficoltà + random(-5, +5)
-     * Successo se punteggioFalco >= difficoltàEffettiva
-     */
+
     public boolean valutaCaccia(Falco falco, Preda preda){
         if(!falco.haEnergia() || falco.haTroppaFame()) return false;
         int fattoreCasuale = random.nextInt(11) -5;

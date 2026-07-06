@@ -5,8 +5,6 @@ import it.unicam.cs.mdpg.rpg129029.model.falco.Falco;
 import it.unicam.cs.mdpg.rpg129029.model.falco.Harris;
 import it.unicam.cs.mdpg.rpg129029.model.falco.Pellegrino;
 
-import java.util.Map;
-import java.util.function.Supplier;
 
 /**
  * FalcoFactory gestisce la scelta del falco da parte del falconiere
@@ -14,29 +12,21 @@ import java.util.function.Supplier;
  */
 public class FalcoFactory {
     /**
-     * Map che tiene coppia chiave, valore per creare falchi,
-     * in caso di estendibilità basta aggiungere al
-     * Supplier una nuova riga
-     */
-    private final Map<String, Supplier<Falco>> tipiDisponibili = Map.of(
-            "Pellegrino", Pellegrino::new,
-            "Harris", Harris::new,
-            "Astore", Astore::new
-    );
-
-    /**
      * creaFalco(...)
      * crea un nuovo falco del tipo richiesto
      *
      * @param tipo Nome del tipo di falco tra quelli disponibili
      * @return una nuova istanza del falco scelto
-     * @throws IllegalArgumentException se il tipo di falco non è tra quelli disponibili
+     * @throws IllegalArgumentException se il tipo di falco non è tra quelli disponibili o se il tipo di falco è nullo
      */
-    public Falco creaFalco(String tipo) {
-        Supplier<Falco> costruttoreFalco = tipiDisponibili.get(tipo);
-        if (costruttoreFalco == null) throw new IllegalArgumentException("il falco " + tipo + " non esiste");
-        return costruttoreFalco.get();
+    public Falco creaFalco (String tipo) {
+        if(tipo == null || tipo.isBlank()) throw new IllegalArgumentException("il tipo deve essere valido");
+        return switch (tipo){
+            case "Pellegrino" -> new Pellegrino();
+            case "Harris" -> new Harris();
+            case "Astore" -> new Astore();
+            default -> throw new IllegalArgumentException("il tipo di falco non esiste");
+        };
     }
-    //public getTipiDisponibili()
 }
 
