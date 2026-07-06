@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update &amp; Fix:&#10;- Implementa ClassificaRepositoryFile &#10;- Fix di id Falconiere con ID univoco&#10;- continuo implementazione GameControl&#10;- Quasi terminata la parte di Persistency&#10;- Fix classe Punteggio.java">
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Fix:&#10;- Modificata classe FalcoFactory usando switch case&#10;- Implementata interfaccia GeneratorePredaCasuale.java e modifica GeneratoreMissioniCasuali sfruttando l'interfaccia appena citata&#10;- Eliminati commenti superflui sulla classe ValutatoreCaccia">
+      <change beforePath="$PROJECT_DIR$/.gradle/9.3.0/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.3.0/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.3.0/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.3.0/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.3.0/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.3.0/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Punteggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Punteggio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/FalcoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/FalcoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/persistence/file/ClassificaRepositoryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/persistence/file/ClassificaRepositoryFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -196,7 +201,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783173481248</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update &amp; Fix:&#10;- Terminata la classe ClassificaRepositoryFile.java , terminata implementazione metodo salva() tramite l'uso di Stream">
+      <option name="closed" value="true" />
+      <created>1783321475841</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1783321475841</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fix:&#10;- Modificata classe FalcoFactory usando switch case&#10;- Implementata interfaccia GeneratorePredaCasuale.java e modifica GeneratoreMissioniCasuali sfruttando l'interfaccia appena citata&#10;- Eliminati commenti superflui sulla classe ValutatoreCaccia">
+      <option name="closed" value="true" />
+      <created>1783340211281</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1783340211281</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +235,9 @@
     <MESSAGE value="Update &amp; Fix:&#10;- Implementata classe FalcoFactory per la creazione dei falchi ad inizio partita&#10;- Implementata ValutatoreCaccia con metodo valutaCaccia che calcola in base ad una formula l'esito dello scontro" />
     <MESSAGE value="Update:&#10;- Implementata classe GsonProvider.java per garantire la persistenza dei dati&#10;- Implementata la classe Punteggio.java per gestire il salvataggio dei punteggi per creare una classifica dei migliori giocatori &#10;- Implementata interfaccia Repository.java per permettere l'interazione coi dati salvati e il salvataggio di essi tramite metodi base come: salva(), elimina(), trovatutti()" />
     <MESSAGE value="Update &amp; Fix:&#10;- Implementa ClassificaRepositoryFile &#10;- Fix di id Falconiere con ID univoco&#10;- continuo implementazione GameControl&#10;- Quasi terminata la parte di Persistency&#10;- Fix classe Punteggio.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update &amp; Fix:&#10;- Implementa ClassificaRepositoryFile &#10;- Fix di id Falconiere con ID univoco&#10;- continuo implementazione GameControl&#10;- Quasi terminata la parte di Persistency&#10;- Fix classe Punteggio.java" />
+    <MESSAGE value="Update &amp; Fix:&#10;- Terminata la classe ClassificaRepositoryFile.java , terminata implementazione metodo salva() tramite l'uso di Stream" />
+    <MESSAGE value="Fix:&#10;- Modificata classe FalcoFactory usando switch case&#10;- Implementata interfaccia GeneratorePredaCasuale.java e modifica GeneratoreMissioniCasuali sfruttando l'interfaccia appena citata&#10;- Eliminati commenti superflui sulla classe ValutatoreCaccia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix:&#10;- Modificata classe FalcoFactory usando switch case&#10;- Implementata interfaccia GeneratorePredaCasuale.java e modifica GeneratoreMissioniCasuali sfruttando l'interfaccia appena citata&#10;- Eliminati commenti superflui sulla classe ValutatoreCaccia" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

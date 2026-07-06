@@ -12,27 +12,30 @@ import java.util.Objects;
 public class Falconiere {
     private final String id;
     private String nome;
-    private final Falco falco;
+    private Falco falco;
     private int missioniCompletate;
+    private int fallimenti;
 
     /**
      * Costruttore della classe Falconiere
      * @param id del Falconiere
      * @param nome del Falconiere
-     * @param falco del Falconiere scelto ad inizo gioco e che rimarrà fisso per tutta la partita, tramite il quale vengono affrontate le missioni
      * @param missioniCompletate le missioni completate dal falconiere fino a questo momento
-     * @throws IllegalArgumentException se id è < 0
+     * @throws IllegalArgumentException se id è null o vuoto
      * @throws IllegalArgumentException se nome è null o lunghezza inferiore a 3
      */
     //Costruttore
 
-    public Falconiere(String id, String nome, Falco falco, int missioniCompletate){
+    public Falconiere(String id, String nome, int missioniCompletate){
         if(id == null || id.isEmpty()) throw new IllegalArgumentException("id non valido");
         if(nome == null || nome.length() < 3 || nome.isBlank()) throw new IllegalArgumentException("Nome non valido");
         this.id = id;
         this.nome = nome;
-        this.falco = falco;
+        this.falco = null;
         this.missioniCompletate = missioniCompletate;
+    }
+    public void assegnaFalco(Falco falco){
+        this.falco = falco;
     }
 
     public String getNome() {
@@ -43,6 +46,12 @@ public class Falconiere {
         this.nome = nome;
     }
 
+    public int getFallimenti(){
+        return this.fallimenti;
+    }
+    public void incrementaFallimenti(){
+        this.fallimenti++;
+    }
     public int getMissioniCompletate() {
         return missioniCompletate;
     }

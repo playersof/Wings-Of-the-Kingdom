@@ -2,13 +2,12 @@ package it.unicam.cs.mdpg.rpg129029.controller;
 
 import it.unicam.cs.mdpg.rpg129029.model.Falconiere;
 import it.unicam.cs.mdpg.rpg129029.model.Missione;
-import it.unicam.cs.mdpg.rpg129029.model.Punteggio;
 import it.unicam.cs.mdpg.rpg129029.model.falco.Falco;
+import it.unicam.cs.mdpg.rpg129029.model.preda.Preda;
 import it.unicam.cs.mdpg.rpg129029.model.service.FalcoFactory;
 import it.unicam.cs.mdpg.rpg129029.model.service.GeneratoreMissioniCasuali;
 import it.unicam.cs.mdpg.rpg129029.model.service.ValutatoreCaccia;
 import it.unicam.cs.mdpg.rpg129029.persistence.ClassificaRepository;
-import it.unicam.cs.mdpg.rpg129029.persistence.file.ClassificaRepositoryFile;
 
 import java.util.UUID;
 
@@ -22,10 +21,7 @@ import java.util.UUID;
 public class GameControl {
     //Attributi
     private Falconiere falconiere;
-    private Falco falco;
     private Missione missioneCorrente;
-    private int fallimenti;
-    private int missioniCompletate;
     private static final int MISSIONI_TOTALI = 5;
     private GeneratoreMissioniCasuali generatoreMissioni;
     private ValutatoreCaccia valutatoreCaccia;
@@ -40,23 +36,41 @@ public class GameControl {
     }
 
     //Metodi
-    public void inizioPartita(){
-        //this.falconiere = new Falconiere(UUID.randomUUID().toString(), nome, falco, missioniCompletate);
+
+    public void creaFalconiere(String nome){
+        if(nome == null || nome.isBlank() || nome.length() < 3) throw new IllegalArgumentException("Il nome non è valido");
+        this.falconiere = new Falconiere(UUID.randomUUID().toString(), nome, 0);
     }
 
-
-    private int missioniGiocate() {
-        return missioniCompletate + fallimenti;
+    public void sceltaFalco(String tipoScelto){
+        Falco falcoScelto = falcoFactory.creaFalco(tipoScelto);
+        falconiere.assegnaFalco(falcoScelto);
     }
 
-//    inizioPartita(),
-//    sceltaFalco(),
-//
-//        for(5volte)
-//    azione(),
-//    controllo(),
-//    creaMissione(),
-//    battaglia();
-//    aggiornamento(),
-//    controlloVittoria()
+    public void eseguiAzione(Falco falco){
+
+    }
+    public void nuovaMissione(){
+        missioneCorrente = generatoreMissioni.generaMissione();
+    }
+
+    public void affrontaCaccia(Falco falco, Preda preda){
+        if(valutatoreCaccia.valutaCaccia(falco, preda)) falconiere.incrementaMissioniCompletate();
+        else falconiere.incrementaFallimenti();
+    }
+    public void controlloVittoria(){
+
+    }
+    //controllo se ho fatto 5 missioni
+    public void fineMissioni(){
+
+    }
+    public void aggiornaStatsFalco(){
+
+    }
+
+    private int missioniGiocate(Falconiere falconiere) {
+        return falconiere.getMissioniCompletate() + falconiere.getFallimenti();
+    }
+
 }
