@@ -13,7 +13,6 @@ import java.util.Random;
  */
 public class ValutatoreCaccia {
     final Random random = new Random();
-
     public boolean valutaCaccia(Falco falco, Preda preda){
         if(!falco.haEnergia() || falco.haTroppaFame()) return false;
         int fattoreCasuale = random.nextInt(11) -5;

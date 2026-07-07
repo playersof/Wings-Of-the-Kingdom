@@ -2,7 +2,6 @@ package it.unicam.cs.mdpg.rpg129029.model;
 
 import it.unicam.cs.mdpg.rpg129029.model.falco.Falco;
 
-import java.util.Objects;
 /**
  * Rappresenta il giocatore durante la partita, colui che prenderà le decisioni principali, scelgierà il suo falco ad inizio
  * partita e ,alla fine se sarà tra i migliori,
@@ -14,7 +13,8 @@ public class Falconiere {
     private String nome;
     private Falco falco;
     private int missioniCompletate;
-    private int fallimenti;
+    private int predePerse;
+    private int predeCatturate;
 
     /**
      * Costruttore della classe Falconiere
@@ -46,11 +46,11 @@ public class Falconiere {
         this.nome = nome;
     }
 
-    public int getFallimenti(){
-        return this.fallimenti;
+    public int getPredePerse(){
+        return this.predePerse;
     }
-    public void incrementaFallimenti(){
-        this.fallimenti++;
+    public void incrementaPredePerse(){
+        this.predePerse++;
     }
     public int getMissioniCompletate() {
         return missioniCompletate;
@@ -63,6 +63,8 @@ public class Falconiere {
     public Falco getFalco() { return this.falco; }
 
     public String getId(){ return this.id; }
+
+    public int getPredeCatturate(){ return this.getPredeCatturate(); }
 
     /**
      * Due Falconieri sono considerati uguali se hanno lo stesso id univoco.
@@ -82,5 +84,9 @@ public class Falconiere {
     public int hashCode()
     {
         return id.hashCode();
+    }
+
+    public void incrementaPredeCatturate() {
+        this.predeCatturate++;
     }
 }
