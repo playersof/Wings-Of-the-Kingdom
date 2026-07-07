@@ -51,6 +51,8 @@ public final class SchermataMissione {
     private Button pulsanteRiposa;
     private Button pulsanteAllena;
 
+    private boolean azioneEseguita = false;
+
     private SchermataMissione(Stage stage, GameControl controller) {
         this.stage = stage;
         this.controller = controller;
@@ -83,6 +85,7 @@ public final class SchermataMissione {
 
         aggiornaStatisticheFalco();
         aggiornaSottotitoloPreda();
+        mostraPredaCorrente();
     }
 
     private VBox costruisciPannelloStatistiche() {
@@ -118,8 +121,18 @@ public final class SchermataMissione {
         barraAddestramento.getStyleClass().add("barra-addestramento");
         barraAddestramento.setPrefWidth(190);
 
+        ImageView vistaFalco = new ImageView();
+        vistaFalco.setFitWidth(140);
+        vistaFalco.setFitHeight(140);
+        vistaFalco.setPreserveRatio(true);
+        Falco falco = controller.getFalconiere().getFalco();
+        Image immagineFalco = Immagini.carica(Immagini.immagineFalco(falco.getClass().getSimpleName()));
+        if (immagineFalco != null) {
+            vistaFalco.setImage(immagineFalco);
+        }
+
         pannello.getChildren().addAll(
-                titoloFalco, new Separator(),
+                titoloFalco, vistaFalco, new Separator(),
                 labelFame, barraFame,
                 labelEnergia, barraEnergia,
                 labelAddestramento, barraAddestramento
@@ -170,17 +183,30 @@ public final class SchermataMissione {
         pulsante.getStyleClass().add("pulsante-pixel");
         pulsante.setPrefWidth(110);
         pulsante.setOnAction(evento -> {
+            if(azioneEseguita) return;
             controller.eseguiAzione(azione);
             aggiornaStatisticheFalco();
+            azioneEseguita = true;
+            disabilitaPulsanteAzione();
         });
         return pulsante;
     }
 
+    private void disabilitaPulsanteAzione(){
+        pulsanteNutri.setDisable(true);
+        pulsanteRiposa.setDisable(true);
+        pulsanteAllena.setDisable(true);
+    }
+
+    private void mostraPredaCorrente(){
+        Preda preda = controller.getMissioneCorrente().getPrede().get(indicePreda);
+        mostraSchedaPreda(preda);
+    }
+
     private void affrontaProssimaPreda() {
+        disabilitaPulsanteAzione();
         Missione missioneCorrente = controller.getMissioneCorrente();
         Preda preda = missioneCorrente.getPrede().get(indicePreda);
-
-        mostraSchedaPreda(preda);
 
         boolean successo = controller.affrontaCaccia(preda);
         aggiornaStatisticheFalco();
@@ -203,6 +229,7 @@ public final class SchermataMissione {
             SchermataFineMissione.mostra(stage, controller);
         } else {
             aggiornaSottotitoloPreda();
+            mostraPredaCorrente();
         }
     }
 

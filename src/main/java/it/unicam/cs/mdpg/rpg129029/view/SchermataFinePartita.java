@@ -10,13 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BackgroundRepeat;
-import javafx.scene.layout.BackgroundSize;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import java.util.List;
@@ -79,7 +73,7 @@ public final class SchermataFinePartita {
         box.getStyleClass().add("box-pergamena");
         box.setAlignment(Pos.TOP_CENTER);
         box.setPadding(new Insets(20, 35, 20, 35));
-        box.setMaxWidth(520);
+        box.setMaxWidth(600);
 
         Label titolo = new Label("I migliori falconieri del regno");
         titolo.setFont(Fonts.testo(22));
@@ -111,20 +105,28 @@ public final class SchermataFinePartita {
         labelPosizione.setFont(Fonts.testo(20));
         labelPosizione.getStyleClass().add("testo-pergamena");
         labelPosizione.setPrefWidth(40);
+        labelPosizione.setMinWidth(Region.USE_PREF_SIZE);
 
         Label labelNome = new Label(punteggio.getNomeFalconiere());
         labelNome.setFont(Fonts.testo(20));
         labelNome.getStyleClass().add("testo-pergamena");
         labelNome.setPrefWidth(200);
+        labelNome.setMinWidth(Region.USE_PREF_SIZE);
+
 
         Label labelMissioni = new Label(punteggio.getMissioniCompletate() + " missioni");
         labelMissioni.setFont(Fonts.testo(18));
         labelMissioni.getStyleClass().add("testo-pergamena");
         labelMissioni.setPrefWidth(130);
+        labelMissioni.setMinWidth(Region.USE_PREF_SIZE);
+
 
         Label labelPrede = new Label(punteggio.getPredeCatturate() + " prede");
         labelPrede.setFont(Fonts.testo(18));
         labelPrede.getStyleClass().add("testo-pergamena");
+        labelNome.setPrefWidth(100);
+        labelPrede.setMinWidth(Region.USE_PREF_SIZE);
+
 
         if (posizione == 1) {
             labelPosizione.getStyleClass().add("riga-classifica-prima");

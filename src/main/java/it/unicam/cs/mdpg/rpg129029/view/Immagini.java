@@ -10,16 +10,16 @@ import java.io.InputStream;
  */
 public final class Immagini {
 
-    private static final String BASE = "resources";
+    private static final String BASE = "";
 
     public static final String FALCO_ASTORE = BASE + "/Falchi/Astore.png";
-    public static final String FALCO_PELLEGRINO = BASE + "/Falchi/pellegrino.png";
+    public static final String FALCO_PELLEGRINO = BASE + "/Falchi/Pellegrino.png";
     public static final String FALCO_HARRIS = BASE + "/Falchi/Harris.png";
 
-    public static final String PREDA_VOLPE = BASE + "/Prede/volpe.png";
-    public static final String PREDA_CONIGLIO = BASE + "/Prede/coniglio.png";
+    public static final String PREDA_VOLPE = BASE + "/Prede/Volpe.png";
+    public static final String PREDA_CONIGLIO = BASE + "/Prede/Coniglio.png";
     public static final String PREDA_ANATRA = BASE + "/Prede/Anatra.png";
-    public static final String PREDA_QUAGLIA = BASE + "/Prede/quaglia.png";
+    public static final String PREDA_QUAGLIA = BASE + "/Prede/Quaglia.png";
 
     /**
      * Sfondo della schermata di benvenuto.

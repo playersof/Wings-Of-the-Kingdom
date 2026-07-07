@@ -40,7 +40,7 @@ public abstract class Falco {
         this.energia = Math.max(MIN_STAT, energia - valore);
     }
 
-    public void diminuisciFame(int valore){ this.fame = Math.min(MAX_STAT , fame + valore); }
+    public void diminuisciFame(int valore){ this.fame = Math.max(MIN_STAT, fame - valore); }
 
     public void aumentaFame(int valore) {
         this.fame = Math.min(MAX_STAT, fame + valore);

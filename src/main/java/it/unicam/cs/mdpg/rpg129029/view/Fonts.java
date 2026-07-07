@@ -24,9 +24,9 @@ import java.io.InputStream;
 public final class Fonts {
 
     private static final String PERCORSO_FONT_TITOLO =
-            "/it/unicam/cs/mdpg/rpg129029/fonts/PressStart2P-Regular.ttf";
+            "/fonts/PressStart2P-Regular.ttf";
     private static final String PERCORSO_FONT_TESTO =
-            "/it/unicam/cs/mdpg/rpg129029/fonts/VT323-Regular.ttf";
+            "/fonts/VT323-Regular.ttf";
 
     private static final String FAMIGLIA_FALLBACK = "Monospaced";
 

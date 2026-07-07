@@ -6,10 +6,6 @@
 
 /* ---------- Sfondi schermata ---------- */
 
-.sfondo-immagine {
-    -fx-background-color: #1c140c;
-}
-
 .sfondo-gioco {
     -fx-background-color: linear-gradient(to bottom, #4a3524, #2e2013);
 }

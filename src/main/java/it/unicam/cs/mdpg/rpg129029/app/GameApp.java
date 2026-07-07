@@ -22,6 +22,7 @@ public class GameApp extends Application {
 
         stagePrincipale.setTitle("Wings of the Kingdom");
         stagePrincipale.setResizable(false);
+        stagePrincipale.setResizable(true); //prova
         SchermataBenvenuto.mostra(stagePrincipale, gameControl);
         stagePrincipale.show();
     }
