@@ -14,7 +14,7 @@ Wings of the kingdom è un GDR che permette al giocatore di mettersi nei panni d
 
 ```bash
 git clone https://github.com/playersof/Wings-Of-the-Kingdom.git
-cd <nome-cartella>
+cd Wings-Of-the-Kingdom
 ```
 
 ### Build del progetto
