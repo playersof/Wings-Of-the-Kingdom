@@ -64,7 +64,7 @@ public class Falconiere {
 
     public String getId(){ return this.id; }
 
-    public int getPredeCatturate(){ return this.getPredeCatturate(); }
+    public int getPredeCatturate(){ return this.predeCatturate; }
 
     /**
      * Due Falconieri sono considerati uguali se hanno lo stesso id univoco.

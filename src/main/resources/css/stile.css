@@ -1,0 +1,152 @@
+/* ===================== Wings of the Kingdom - stile condiviso ===================== */
+
+.root {
+    -fx-font-smoothing-type: gray;
+}
+
+/* ---------- Sfondi schermata ---------- */
+
+.sfondo-immagine {
+    -fx-background-color: #1c140c;
+}
+
+.sfondo-gioco {
+    -fx-background-color: linear-gradient(to bottom, #4a3524, #2e2013);
+}
+
+/* ---------- Titoli ---------- */
+
+.titolo-gioco {
+    -fx-text-fill: #f2e2b6;
+    -fx-effect: dropshadow(gaussian, #000000, 6, 0.7, 2, 2);
+}
+
+.titolo-sezione {
+    -fx-text-fill: #f2e2b6;
+    -fx-effect: dropshadow(gaussian, #000000, 4, 0.6, 1, 1);
+}
+
+.testo-esito-vittoria {
+    -fx-text-fill: #d4af37;
+    -fx-effect: dropshadow(gaussian, #000000, 6, 0.7, 2, 2);
+}
+
+.testo-esito-sconfitta {
+    -fx-text-fill: #b5433d;
+    -fx-effect: dropshadow(gaussian, #000000, 6, 0.7, 2, 2);
+}
+
+/* ---------- Box "pergamena" ---------- */
+
+.box-pergamena {
+    -fx-background-color: #e8d9b5;
+    -fx-background-radius: 4;
+    -fx-border-color: #6b4423;
+    -fx-border-width: 4;
+    -fx-border-radius: 4;
+    -fx-effect: dropshadow(gaussian, #000000, 10, 0.5, 0, 4);
+}
+
+.testo-pergamena {
+    -fx-text-fill: #3b2a1a;
+}
+
+.errore-pergamena {
+    -fx-text-fill: #8b1a1a;
+}
+
+/* ---------- Box "legno intagliato" ---------- */
+
+.box-legno {
+    -fx-background-color: #6b4423;
+    -fx-background-radius: 6;
+    -fx-border-color: #3b2a1a;
+    -fx-border-width: 3;
+    -fx-border-radius: 6;
+    -fx-effect: dropshadow(gaussian, #000000, 8, 0.5, 0, 3);
+}
+
+.box-legno-selezionabile:hover {
+    -fx-border-color: #d4af37;
+    -fx-cursor: hand;
+}
+
+.testo-legno {
+    -fx-text-fill: #f2e2b6;
+}
+
+/* ---------- Campo di testo ---------- */
+
+.campo-nome {
+    -fx-background-color: #fffaf0;
+    -fx-text-fill: #3b2a1a;
+    -fx-border-color: #6b4423;
+    -fx-border-width: 2;
+    -fx-background-radius: 2;
+    -fx-border-radius: 2;
+}
+
+/* ---------- Pulsanti ---------- */
+
+.pulsante-pixel {
+    -fx-background-color: #6b4423;
+    -fx-text-fill: #f2e2b6;
+    -fx-border-color: #3b2a1a;
+    -fx-border-width: 3;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-cursor: hand;
+}
+
+.pulsante-pixel:hover {
+    -fx-background-color: #855a2f;
+    -fx-border-color: #d4af37;
+}
+
+.pulsante-pixel:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+.pulsante-oro {
+    -fx-background-color: #d4af37;
+    -fx-text-fill: #3b2a1a;
+    -fx-border-color: #7a5c1e;
+    -fx-border-width: 3;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-cursor: hand;
+}
+
+.pulsante-oro:hover {
+    -fx-background-color: #e8c65a;
+}
+
+/* ---------- Statistiche / barre ---------- */
+
+.pannello-stats {
+    -fx-background-color: rgba(0, 0, 0, 0.35);
+    -fx-border-color: #d4af37;
+    -fx-border-width: 2;
+}
+
+.barra-fame > .bar { -fx-background-color: #b5433d; -fx-background-insets: 0; }
+.barra-energia > .bar { -fx-background-color: #4a7a3d; -fx-background-insets: 0; }
+.barra-addestramento > .bar { -fx-background-color: #4a6fa5; -fx-background-insets: 0; }
+
+.progress-bar .track {
+    -fx-background-color: #2a1e12;
+    -fx-background-insets: 0;
+}
+
+/* ---------- Classifica ---------- */
+
+.riga-classifica {
+    -fx-border-color: transparent transparent #6b4423 transparent;
+    -fx-border-width: 1;
+}
+
+.riga-classifica-prima {
+    -fx-text-fill: #8b1a1a;
+    -fx-font-weight: bold;
+}

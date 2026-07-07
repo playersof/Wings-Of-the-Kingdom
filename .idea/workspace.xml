@@ -4,15 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Fix &amp; Update:&#10; - Terminata implementazione GameControl e fix errori di progettazione notati durante implementazione GameControl in modo che sia Mediatore tra Gui, model e persistence">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Anatra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Astore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Harris.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/coniglio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pellegrino.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/quaglia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/volpe.png" afterDir="false" />
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update:&#10; - Implementazione Gui">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/GameApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Fonts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Immagini.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Layout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataBenvenuto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFineMissione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFinePartita.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataMissione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataSceltaFalco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/stile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sfondo_benvenuto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sfondo_finale.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Anatra.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Prede/Anatra.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Astore.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Falchi/Astore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Harris.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Falchi/Harris.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/coniglio.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Prede/coniglio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pellegrino.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Falchi/pellegrino.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/quaglia.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Prede/quaglia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/volpe.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Prede/volpe.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,28 +94,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "OverrideImplement.generate.javadoc": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sgull/Desktop/WingsOfTheKingdom/src/main/resources",
-    "onboarding.tips.debug.path": "C:/Users/sgull/Desktop/WingsOfTheKingdom/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.WingsOfTheKingdom [:it.unicam.cs.mdpg.rpg129029.app.GameApp.main()].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sgull/Desktop/WingsOfTheKingdom/src/main/java/it/unicam/cs/mdpg/rpg129029/view&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/sgull/Desktop/WingsOfTheKingdom/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sgull\Desktop\WingsOfTheKingdom\src\main\java\it\unicam\cs\mdpg\rpg129029\view" />
       <recent name="C:\Users\sgull\Desktop\WingsOfTheKingdom\src\main\resources" />
+      <recent name="C:\Users\sgull\Desktop\WingsOfTheKingdom\src\main\java\it\unicam\cs\mdpg\rpg129029\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sgull\Desktop\WingsOfTheKingdom\src\main\resources\Prede" />
+      <recent name="C:\Users\sgull\Desktop\WingsOfTheKingdom\src\main\resources\Falchi" />
     </key>
   </component>
   <component name="TaskManager">
@@ -236,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783439699850</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update:&#10; - Generate immagini pixel per personaggi GUI">
+      <option name="closed" value="true" />
+      <created>1783458286859</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1783458286860</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +291,8 @@
     <MESSAGE value="Fix:&#10;- Modificata classe FalcoFactory usando switch case&#10;- Implementata interfaccia GeneratorePredaCasuale.java e modifica GeneratoreMissioniCasuali sfruttando l'interfaccia appena citata&#10;- Eliminati commenti superflui sulla classe ValutatoreCaccia" />
     <MESSAGE value="Fix &amp; Update:&#10; - Continuata implementazione GameControl.java e fix classe Falconiere.java" />
     <MESSAGE value="Fix &amp; Update:&#10; - Terminata implementazione GameControl e fix errori di progettazione notati durante implementazione GameControl in modo che sia Mediatore tra Gui, model e persistence" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix &amp; Update:&#10; - Terminata implementazione GameControl e fix errori di progettazione notati durante implementazione GameControl in modo che sia Mediatore tra Gui, model e persistence" />
+    <MESSAGE value="Update:&#10; - Generate immagini pixel per personaggi GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update:&#10; - Generate immagini pixel per personaggi GUI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

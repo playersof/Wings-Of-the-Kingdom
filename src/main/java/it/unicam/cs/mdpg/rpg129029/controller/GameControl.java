@@ -129,4 +129,11 @@ public class GameControl {
     public int getMissioniGiocate() {
         return missioniGiocate;
     }
+    /**
+     * Espone la classifica (i migliori punteggi salvati) alla GUI,
+     * senza che questa debba accedere direttamente alla persistence.
+     */
+    public java.util.List<Punteggio> getClassifica() {
+        return classificaRepository.trovaTutti();
+    }
 }
