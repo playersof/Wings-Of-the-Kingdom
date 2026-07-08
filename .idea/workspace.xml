@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Fix:&#10; - Fix path immagini e css per la Gui">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/PressStart2P-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/VT323-Regular.ttf" afterDir="false" />
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Fix:&#10; - Fix errori visualizzazione prede gui&#10; - Fix importante sulla logica dell'esecuzione delle azioni prima delle caccie risolto disabilitando i pulsanti dopo aver fatto la scelta dell'azione prima di ogni missione&#10; - Aggiunga visualizzazione immagine falco scelto durante tutta la partita&#10; - Risolto problema di dimensione testo delle prede catturate sulla classifica finale">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/GameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/GameApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Fonts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Fonts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Immagini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Immagini.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFinePartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFinePartita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataMissione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataMissione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Falchi/pellegrino.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Falchi/Pellegrino.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Prede/coniglio.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Prede/Coniglio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Prede/quaglia.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Prede/Quaglia.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Prede/volpe.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Prede/Volpe.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/stile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/stile.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,26 +71,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.WingsOfTheKingdom [:it.unicam.cs.mdpg.rpg129029.app.GameApp.main()].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "OverrideImplement.generate.javadoc": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sgull/Desktop/WingsOfTheKingdom/src/main/resources/fonts",
-    "onboarding.tips.debug.path": "C:/Users/sgull/Desktop/WingsOfTheKingdom/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.WingsOfTheKingdom [:it.unicam.cs.mdpg.rpg129029.app.GameApp.main()].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sgull/Desktop/WingsOfTheKingdom/src/main/resources/fonts&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/sgull/Desktop/WingsOfTheKingdom/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sgull\Desktop\WingsOfTheKingdom\src\main\resources\fonts" />
@@ -268,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783462323119</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fix:&#10; - Fix errori visualizzazione prede gui&#10; - Fix importante sulla logica dell'esecuzione delle azioni prima delle caccie risolto disabilitando i pulsanti dopo aver fatto la scelta dell'azione prima di ogni missione&#10; - Aggiunga visualizzazione immagine falco scelto durante tutta la partita&#10; - Risolto problema di dimensione testo delle prede catturate sulla classifica finale">
+      <option name="closed" value="true" />
+      <created>1783468749181</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1783468749181</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +288,8 @@
     <MESSAGE value="Fix &amp; Update:&#10; - Terminata implementazione GameControl e fix errori di progettazione notati durante implementazione GameControl in modo che sia Mediatore tra Gui, model e persistence" />
     <MESSAGE value="Update:&#10; - Generate immagini pixel per personaggi GUI" />
     <MESSAGE value="Fix:&#10; - Fix path immagini e css per la Gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix:&#10; - Fix path immagini e css per la Gui" />
+    <MESSAGE value="Fix:&#10; - Fix errori visualizzazione prede gui&#10; - Fix importante sulla logica dell'esecuzione delle azioni prima delle caccie risolto disabilitando i pulsanti dopo aver fatto la scelta dell'azione prima di ogni missione&#10; - Aggiunga visualizzazione immagine falco scelto durante tutta la partita&#10; - Risolto problema di dimensione testo delle prede catturate sulla classifica finale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix:&#10; - Fix errori visualizzazione prede gui&#10; - Fix importante sulla logica dell'esecuzione delle azioni prima delle caccie risolto disabilitando i pulsanti dopo aver fatto la scelta dell'azione prima di ogni missione&#10; - Aggiunga visualizzazione immagine falco scelto durante tutta la partita&#10; - Risolto problema di dimensione testo delle prede catturate sulla classifica finale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

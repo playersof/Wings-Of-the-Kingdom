@@ -10,27 +10,25 @@ import java.io.InputStream;
  */
 public final class Immagini {
 
-    private static final String BASE = "";
+    public static final String FALCO_ASTORE = "/Falchi/Astore.png";
+    public static final String FALCO_PELLEGRINO = "/Falchi/Pellegrino.png";
+    public static final String FALCO_HARRIS = "/Falchi/Harris.png";
 
-    public static final String FALCO_ASTORE = BASE + "/Falchi/Astore.png";
-    public static final String FALCO_PELLEGRINO = BASE + "/Falchi/Pellegrino.png";
-    public static final String FALCO_HARRIS = BASE + "/Falchi/Harris.png";
-
-    public static final String PREDA_VOLPE = BASE + "/Prede/Volpe.png";
-    public static final String PREDA_CONIGLIO = BASE + "/Prede/Coniglio.png";
-    public static final String PREDA_ANATRA = BASE + "/Prede/Anatra.png";
-    public static final String PREDA_QUAGLIA = BASE + "/Prede/Quaglia.png";
+    public static final String PREDA_VOLPE = "/Prede/Volpe.png";
+    public static final String PREDA_CONIGLIO = "/Prede/Coniglio.png";
+    public static final String PREDA_ANATRA = "/Prede/Anatra.png";
+    public static final String PREDA_QUAGLIA = "/Prede/Quaglia.png";
 
     /**
      * Sfondo della schermata di benvenuto.
      *
      */
-    public static final String SFONDO_BENVENUTO = BASE + "/sfondo_benvenuto.png";
+    public static final String SFONDO_BENVENUTO = "/sfondo_benvenuto.png";
 
     /**
      * Sfondo della schermata finale (vittoria/sconfitta + classifica).
      */
-    public static final String SFONDO_FINALE = BASE + "/sfondo_finale.png";
+    public static final String SFONDO_FINALE = "/sfondo_finale.png";
 
     private Immagini() {
     }
