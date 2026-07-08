@@ -26,7 +26,6 @@ public class GameControl {
     private Missione missioneCorrente;
     private static final int MISSIONI_NECESSARIE = 3;
     private static final int PREDE_NECESSARIE = 5;
-    private static final int MISSIONI_TOTALI = 5;
     private final GeneratoreMissioniCasuali generatoreMissioni;
     private final ValutatoreCaccia valutatoreCaccia;
     private final FalcoFactory falcoFactory;
@@ -64,6 +63,7 @@ public class GameControl {
     public void iniziaMissione(){
         missioneCorrente = generatoreMissioni.generaMissione();
     }
+
     public void concludiMissione() {
         if(missioneCorrente.isCompletata()) falconiere.incrementaMissioniCompletate();
         missioniGiocate++;
@@ -93,13 +93,6 @@ public class GameControl {
 
 
     //PARTITA
-
-//    public void avviaPartita(){
-//        while(missioniGiocate<MISSIONI_TOTALI && !giocatorePerso()){
-//            svolgiMissione();
-//        }
-//        terminaPartita();
-//    }
 
     public boolean giocatorePerso(){
         return falconiere.getPredePerse()>= PREDE_NECESSARIE;

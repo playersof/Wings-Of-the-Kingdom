@@ -19,10 +19,9 @@ dependencies {
 }
 
 javafx {
-    // Versione LTS di OpenJFX; se in locale hai già una versione diversa
-    // installata puoi allinearla qui senza toccare il resto del progetto.
+    // Versione LTS di OpenJFX allinearla qui senza toccare il resto del progetto.
     version = "21.0.2"
-    modules = listOf("javafx.controls", "javafx.graphics")
+    modules = listOf("javafx.controls", "javafx.graphics", "javafx.media")
 }
 
 application {

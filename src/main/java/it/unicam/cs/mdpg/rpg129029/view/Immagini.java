@@ -23,7 +23,7 @@ public final class Immagini {
      * Sfondo della schermata di benvenuto.
      *
      */
-    public static final String SFONDO_BENVENUTO = "/sfondo_benvenuto.png";
+    public static final String SFONDO_BENVENUTO = "/schermata_di_benvenuto.png";
 
     /**
      * Sfondo della schermata finale (vittoria/sconfitta + classifica).

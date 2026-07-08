@@ -5,18 +5,16 @@ import it.unicam.cs.mdpg.rpg129029.model.preda.Preda;
 import java.util.List;
 
 public class Missione {
-    private int id;
     private List<Preda> prede;
     private int predeCatturate;
     private boolean completata;
     //variabile modificabile in caso di estendibilità per far si che in futuro si possano aggiungere più caccie per missione
     private static final int NUM_PREDE_PER_MISSIONE = 2;
 
-    public Missione(int id , List<Preda> prede ){
+    public Missione(List<Preda> prede ){
         if (prede.size() != NUM_PREDE_PER_MISSIONE) {
             throw new IllegalArgumentException("Una missione deve contenere esattamente "+ NUM_PREDE_PER_MISSIONE + " prede.");
         }
-        this.id = id;
         this.prede = prede ;
         this.predeCatturate = 0;
         completata = false;
@@ -31,10 +29,6 @@ public class Missione {
     }
 
     public boolean isCompletata(){ return completata; }
-
-    public int getPredeCatturate() { return predeCatturate; }
-
-    public int getId() { return id; }
 
     public static int getNumPredePerMissione() { return NUM_PREDE_PER_MISSIONE; }
 }

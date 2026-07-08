@@ -32,10 +32,6 @@ public abstract class Falco {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public void diminuisciEnergia(int valore) {
         this.energia = Math.max(MIN_STAT, energia - valore);
     }

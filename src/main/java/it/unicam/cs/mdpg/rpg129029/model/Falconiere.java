@@ -42,10 +42,6 @@ public class Falconiere {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public int getPredePerse(){
         return this.predePerse;
     }

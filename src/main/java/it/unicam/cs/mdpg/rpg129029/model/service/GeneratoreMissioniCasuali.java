@@ -16,7 +16,6 @@ import java.util.Random;
  */
 public class GeneratoreMissioniCasuali implements GeneratorePredaCasuale{
     private final Random generatoreInt = new Random();
-    private int id = 1;
 
     public Missione generaMissione() {
         List<Preda> lista = new ArrayList<>();
@@ -25,8 +24,7 @@ public class GeneratoreMissioniCasuali implements GeneratorePredaCasuale{
             Preda preda = creaPreda(indicePreda);
             lista.add(preda);
         }
-        Missione missione = new Missione(id,lista);
-        id++;
+        Missione missione = new Missione(lista);
         return missione;
     }
 

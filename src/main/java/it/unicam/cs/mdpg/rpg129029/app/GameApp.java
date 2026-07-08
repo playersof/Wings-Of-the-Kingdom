@@ -2,6 +2,7 @@ package it.unicam.cs.mdpg.rpg129029.app;
 
 import it.unicam.cs.mdpg.rpg129029.controller.GameControl;
 import it.unicam.cs.mdpg.rpg129029.persistence.file.ClassificaRepositoryFile;
+import it.unicam.cs.mdpg.rpg129029.view.MusicaSottofondo;
 import it.unicam.cs.mdpg.rpg129029.view.SchermataBenvenuto;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -18,13 +19,18 @@ public class GameApp extends Application {
 
     @Override
     public void start(Stage stagePrincipale) {
+        MusicaSottofondo.avvia();
         GameControl gameControl = new GameControl(new ClassificaRepositoryFile(PERCORSO_CLASSIFICA));
 
         stagePrincipale.setTitle("Wings of the Kingdom");
-        stagePrincipale.setResizable(false);
-        stagePrincipale.setResizable(true); //prova
+        stagePrincipale.setResizable(true);
         SchermataBenvenuto.mostra(stagePrincipale, gameControl);
         stagePrincipale.show();
+    }
+
+    @Override
+    public void stop() {
+        MusicaSottofondo.ferma();
     }
 
     public static void main(String[] args) {

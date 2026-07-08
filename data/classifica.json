@@ -1,26 +1,7 @@
 [
   {
-    "idFalconiere": "5683a33e-9278-4638-8e49-ca5e41811934",
-    "nomeFalconiere": "player2",
-    "missioniCompletate": 3,
-    "predeCatturate": 8
-  },
-  {
-    "idFalconiere": "3b673789-b8b2-430c-ba2b-b86e2a24b9cb",
     "nomeFalconiere": "sofi",
-    "missioniCompletate": 3,
-    "predeCatturate": 7
-  },
-  {
-    "idFalconiere": "281d20aa-54d5-4ffe-bb4e-98d0472521c0",
-    "nomeFalconiere": "Sofia",
-    "missioniCompletate": 3,
-    "predeCatturate": 6
-  },
-  {
-    "idFalconiere": "56a4758f-6d73-4d2e-9771-1e8737a5fa1b",
-    "nomeFalconiere": "player0",
-    "missioniCompletate": 3,
-    "predeCatturate": 6
+    "missioniCompletate": 4,
+    "predeCatturate": 9
   }
 ]
