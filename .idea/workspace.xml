@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Fix:&#10; - path immagini fixato">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/MusicaSottofondo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/musica_sottofondo.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schermata_di_benvenuto.png" afterDir="false" />
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Fix:&#10; - eliminati metodi e campi superflui nel codice &#10; - Aggiunto MediaPlayer per canzone come soundtrack del gameplay&#10; - Modificata schermata di benvenuto">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/classifica.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/classifica.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/GameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/GameApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Falconiere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Missione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Missione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Punteggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/Punteggio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/GeneratoreMissioniCasuali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/GeneratoreMissioniCasuali.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Immagini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Immagini.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sfondo_benvenuto.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783511736468</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fix:&#10; - eliminati metodi e campi superflui nel codice &#10; - Aggiunto MediaPlayer per canzone come soundtrack del gameplay&#10; - Modificata schermata di benvenuto">
+      <option name="closed" value="true" />
+      <created>1783517326675</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1783517326675</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +308,8 @@
     <MESSAGE value="Fix:&#10; - Fix path immagini e css per la Gui" />
     <MESSAGE value="Fix:&#10; - Fix errori visualizzazione prede gui&#10; - Fix importante sulla logica dell'esecuzione delle azioni prima delle caccie risolto disabilitando i pulsanti dopo aver fatto la scelta dell'azione prima di ogni missione&#10; - Aggiunga visualizzazione immagine falco scelto durante tutta la partita&#10; - Risolto problema di dimensione testo delle prede catturate sulla classifica finale" />
     <MESSAGE value="Fix:&#10; - path immagini fixato" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix:&#10; - path immagini fixato" />
+    <MESSAGE value="Fix:&#10; - eliminati metodi e campi superflui nel codice &#10; - Aggiunto MediaPlayer per canzone come soundtrack del gameplay&#10; - Modificata schermata di benvenuto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix:&#10; - eliminati metodi e campi superflui nel codice &#10; - Aggiunto MediaPlayer per canzone come soundtrack del gameplay&#10; - Modificata schermata di benvenuto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
