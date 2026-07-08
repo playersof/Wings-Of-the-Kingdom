@@ -19,38 +19,46 @@ cd Wings-Of-the-Kingdom
 
 ### Build del progetto
 ```bash
-./gradlew build
+./gradlew build        # Linux/Mac
+.\gradlew build        # Windows PowerShell
 ```
 
 ### Esecuzione
 ```bash
-./gradlew run
+./gradlew run          # Linux/Mac
+.\gradlew run          # Windows PowerShell
 ```
 
 ---
 
 ## 🤖 Uso di strumenti di AI
 
-Indicare **se e come** sono stati utilizzati strumenti di AI (es. ChatGPT, Copilot, ecc.).
-Descrivere in modo chiaro **per quali attività** e **con quale livello di intervento personale**.
+Durante lo sviluppo del progetto è stata utilizzata l'intelligenza come supporto nelle seguenti attività:
 
+Utilizzato ChatGPT per:
+
+- brainstorming iniziale sulla pianificazione delle fasi di progettazione
+- chiarimenti su concetti di programmazione JavaFX
+- supporto nella comprensione di principi di progettazione SOLID
+- revisione del codice e suggerimenti di miglioramento della struttura delle classi
+- supporto nella progettazione dell'architettura Model-View-Controller (MVC)
+- chiarimenti sull'utilizzo di librerie Java (es. Gson, JavaFX MediaPlayer)
+
+Utilizzato Gemini per:
+
+- generazione delle immagini delle entità e degli sfondi
+
+Utilizzato Claude per:
+
+- autocompletamento di metodi semplici
+- generazione di codice ripetitivo (es. getter/setter)
+
+
+Tutte le decisioni progettuali, l'implementazione finale del codice e le scelte architetturali sono state effettuate e verificate dall'autore del progetto.
 ---
 
 📌 Per una descrizione più dettagliata dell’uso dell’AI, utilizzare la **Wiki del repository**.
 
-
-### Esempi :
-
-* Utilizzato ChatGPT per:
-
-    * comprendere concetti teorici (es. differenza tra classi e oggetti)
-    * chiarire errori di compilazione
-    * suggerimenti su struttura del codice
-
-* Utilizzato Copilot per:
-
-    * autocompletamento di metodi semplici
-    * generazione di codice ripetitivo (es. getter/setter)
 
 * Utilizzato ChatGPT per generare una prima versione di una funzione, poi:
 
