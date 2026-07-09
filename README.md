@@ -8,7 +8,7 @@ Wings of the kingdom è un GDR che permette al giocatore di mettersi nei panni d
 
 ### Prerequisiti
 - Java 25 (LTS)
-- Gradle
+- Gradle 9.4.1
 
 ### Istruzioni
 
@@ -52,9 +52,14 @@ Utilizzato Claude per:
 
 - autocompletamento di metodi semplici
 - generazione di codice ripetitivo (es. getter/setter)
+- Discussione e revisione della separazione delle responsabilità tra model, controller, service e persistence
+- Debug e correzione errori di sintassi/logica nel codice scritto da me
+- Assistenza nelle disgnosi di bug a terminazione implementazione progetto
+- Chiarificazione su concetti Java
+- Spiegazione di concetti Java
 
+Tutte le decisioni progettiali, il codice del model, dei service, del controller, la logica di gioco, l'implementazione finale del codice e le scelte architetturali sono stati scritti autonomamente da me; l'assistenza AI è stata usata principalmente per validare le scelte progettuali, individuare errori, e chiarire concetti tecnici specifici.
 
-Tutte le decisioni progettuali, l'implementazione finale del codice e le scelte architetturali sono state effettuate e verificate dall'autore del progetto.
 ---
 
 📌 Per una descrizione più dettagliata dell’uso dell’AI, utilizzare la **Wiki del repository**.
