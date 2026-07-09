@@ -60,11 +60,5 @@ Tutte le decisioni progettiali, il codice del model, dei service, del controller
 
 📌 Per una descrizione più dettagliata dell’uso dell’AI, utilizzare la **Wiki del repository**.
 
-
-* Utilizzato ChatGPT per generare una prima versione di una funzione, poi:
-
-    * modificata e adattata manualmente
-    * testata e corretta personalmente
-
 ---
 
