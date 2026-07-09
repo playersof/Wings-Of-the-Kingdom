@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update:&#10;- Revisione JavaDoc e commenti sul codice">
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update:&#10;- Eliminata duplicazione anomala di file">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783606293392</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Update:&#10;- Eliminata duplicazione anomala di file">
+      <option name="closed" value="true" />
+      <created>1783606995388</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1783606995388</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +342,8 @@
     <MESSAGE value="Fix:&#10; - eliminati metodi e campi superflui nel codice &#10; - Aggiunto MediaPlayer per canzone come soundtrack del gameplay&#10; - Modificata schermata di benvenuto" />
     <MESSAGE value="Fix:&#10; -schermata di benvenuto" />
     <MESSAGE value="Update:&#10;- Revisione JavaDoc e commenti sul codice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update:&#10;- Revisione JavaDoc e commenti sul codice" />
+    <MESSAGE value="Update:&#10;- Eliminata duplicazione anomala di file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update:&#10;- Eliminata duplicazione anomala di file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

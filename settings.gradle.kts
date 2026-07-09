@@ -11,4 +11,3 @@ plugins {
 }
 
 rootProject.name = "WingsOfTheKingdom"
-include("app")
