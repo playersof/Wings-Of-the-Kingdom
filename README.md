@@ -8,7 +8,7 @@ Wings of the kingdom è un GDR che permette al giocatore di mettersi nei panni d
 
 ### Prerequisiti
 - Java 25 (LTS)
-- Gradle
+- Gradle 9.4.1
 
 ### Istruzioni
 
@@ -39,10 +39,8 @@ Utilizzato ChatGPT per:
 
 - brainstorming iniziale sulla pianificazione delle fasi di progettazione
 - chiarimenti su concetti di programmazione JavaFX
-- supporto nella comprensione di principi di progettazione SOLID
-- revisione del codice e suggerimenti di miglioramento della struttura delle classi
-- supporto nella progettazione dell'architettura Model-View-Controller (MVC)
-- chiarimenti sull'utilizzo di librerie Java (es. Gson, JavaFX MediaPlayer)
+- supporto nella comprensione dei principi di progettazione SOLID
+- chiarimenti sull'utilizzo di librerie Java
 
 Utilizzato Gemini per:
 
@@ -52,18 +50,15 @@ Utilizzato Claude per:
 
 - autocompletamento di metodi semplici
 - generazione di codice ripetitivo (es. getter/setter)
+- Revisione della separazione delle responsabilità tra model, controller, service e persistence
+- Debug e correzione errori di sintassi/logica nel codice
+- Chiarificazione su concetti Java
 
+Tutte le decisioni progettiali, il codice del model, dei service, del controller, la logica di gioco, l'implementazione finale del codice e le scelte architetturali sono stati scritti autonomamente da me; l'assistenza AI è stata usata principalmente per validare le scelte progettuali, individuare errori, e chiarire concetti tecnici specifici.
 
-Tutte le decisioni progettuali, l'implementazione finale del codice e le scelte architetturali sono state effettuate e verificate dall'autore del progetto.
 ---
 
 📌 Per una descrizione più dettagliata dell’uso dell’AI, utilizzare la **Wiki del repository**.
-
-
-* Utilizzato ChatGPT per generare una prima versione di una funzione, poi:
-
-    * modificata e adattata manualmente
-    * testata e corretta personalmente
 
 ---
 
