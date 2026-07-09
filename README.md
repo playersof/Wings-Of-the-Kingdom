@@ -39,10 +39,8 @@ Utilizzato ChatGPT per:
 
 - brainstorming iniziale sulla pianificazione delle fasi di progettazione
 - chiarimenti su concetti di programmazione JavaFX
-- supporto nella comprensione di principi di progettazione SOLID
-- revisione del codice e suggerimenti di miglioramento della struttura delle classi
-- supporto nella progettazione dell'architettura Model-View-Controller (MVC)
-- chiarimenti sull'utilizzo di librerie Java (es. Gson, JavaFX MediaPlayer)
+- supporto nella comprensione dei principi di progettazione SOLID
+- chiarimenti sull'utilizzo di librerie Java
 
 Utilizzato Gemini per:
 
@@ -52,11 +50,9 @@ Utilizzato Claude per:
 
 - autocompletamento di metodi semplici
 - generazione di codice ripetitivo (es. getter/setter)
-- Discussione e revisione della separazione delle responsabilità tra model, controller, service e persistence
-- Debug e correzione errori di sintassi/logica nel codice scritto da me
-- Assistenza nelle disgnosi di bug a terminazione implementazione progetto
+- Revisione della separazione delle responsabilità tra model, controller, service e persistence
+- Debug e correzione errori di sintassi/logica nel codice
 - Chiarificazione su concetti Java
-- Spiegazione di concetti Java
 
 Tutte le decisioni progettiali, il codice del model, dei service, del controller, la logica di gioco, l'implementazione finale del codice e le scelte architetturali sono stati scritti autonomamente da me; l'assistenza AI è stata usata principalmente per validare le scelte progettuali, individuare errori, e chiarire concetti tecnici specifici.
 
