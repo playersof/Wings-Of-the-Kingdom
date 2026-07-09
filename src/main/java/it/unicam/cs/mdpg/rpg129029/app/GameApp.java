@@ -8,9 +8,8 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 
 /**
- * Punto d'ingresso JavaFX di "Wings of the Kingdom".
- * Si limita a costruire il {@link GameControl} e a mostrare la prima
- * schermata: tutta la logica resta nel controller e nel model.
+ * Punto d'ingresso JavaFX
+ * Costruisce il GameControl e mostra la prima schermata
  */
 public class GameApp extends Application {
 
