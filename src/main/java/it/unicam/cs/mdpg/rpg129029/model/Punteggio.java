@@ -1,5 +1,9 @@
 package it.unicam.cs.mdpg.rpg129029.model;
 
+/**
+ * Rappresenta il punteggio che verrà mostrato in classifica se ci si posiziona tra i
+ * migliori 5 giocatori.
+ */
 public class Punteggio implements Comparable<Punteggio>{
         private final String nomeFalconiere;
         private final int missioniCompletate;
@@ -20,7 +24,7 @@ public class Punteggio implements Comparable<Punteggio>{
 
     /**
      *
-     * @param altro the object da comparare.
+     * @param altro l' object da comparare.
      * @return a partià di missioni completate la differenza tra le prede catturate
      */
         @Override

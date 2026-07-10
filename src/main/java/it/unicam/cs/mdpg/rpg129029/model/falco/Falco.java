@@ -1,5 +1,10 @@
 package it.unicam.cs.mdpg.rpg129029.model.falco;
 
+/**
+ * Rappresenta un Falco con tutte le sue statistiche che nel corso della
+ * partita verranno modificate automaticamente o manualmente tramite azioni
+ * intraprese dal giocatore (falconiere) prima di ogni missione
+ */
 public abstract class Falco {
     private String nome;
     private int fame;

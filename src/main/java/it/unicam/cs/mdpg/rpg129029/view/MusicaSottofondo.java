@@ -3,6 +3,10 @@ package it.unicam.cs.mdpg.rpg129029.view;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+/**
+ * MediaPlayer per soundtrack gioco, l'audio appena termina si ripete all'infinito in loop.
+ */
+
 public class MusicaSottofondo {
     private static MediaPlayer mediaPlayer;
 

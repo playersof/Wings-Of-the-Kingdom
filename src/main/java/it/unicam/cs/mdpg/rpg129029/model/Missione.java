@@ -4,6 +4,10 @@ import it.unicam.cs.mdpg.rpg129029.model.preda.Preda;
 
 import java.util.List;
 
+/**
+ * Rappresenta la Missione (1/5) che il giocatore dovrà affrontare per vincere
+ * catturando prede.
+ */
 public class Missione {
     private List<Preda> prede;
     private int predeCatturate;

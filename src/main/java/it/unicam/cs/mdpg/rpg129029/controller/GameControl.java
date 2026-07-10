@@ -18,7 +18,7 @@ import java.util.UUID;
  * E' l'unico punto di contatto: la GUI non accede mai direttamente alle classi
  * del model o della persistence, ma passa sempre da qui.
  * Questo garantisce che, se in futuro si vuole sostituire la GUI (es. passare
- * da Swing a JavaFX o a una versione web), il controller resta invariato.
+ * da JavaFX a Swing o a una versione web), il controller resta invariato.
  */
 public class GameControl {
     //Attributi
@@ -41,12 +41,21 @@ public class GameControl {
         this.falcoFactory = new FalcoFactory();
     }
 
-    //CREAZIONE GIOCATORE
+    /**
+     * Metodo per la creazione del Falconiere con un id univoco randomico
+     * @param nome scelto dal player che deve essere di almeno 3 caratteri (non Blank)
+     */
 
     public void creaFalconiere(String nome){
         if(nome == null || nome.isBlank() || nome.length() < 3) throw new IllegalArgumentException("Il nome non è valido");
         this.falconiere = new Falconiere(UUID.randomUUID().toString(), nome, 0);
     }
+
+    /**
+     * Metodo che permette la scelta del Falco da parte del giocatore ad inizio partita
+     * Si appoggia a FalcoFactory che istanzierà l'oggetto scelto assegnandola al Falconiere
+     * @param tipoScelto il tipo di falco scelto dal giocatore
+     */
 
     public void sceltaFalco(String tipoScelto){
         Falco falcoScelto = falcoFactory.creaFalco(tipoScelto);
@@ -55,19 +64,43 @@ public class GameControl {
 
     //MISSIONE
 
+    /**
+     * Permette l'esecuzione dell'azione sul falco tra le possibili scelte
+     * @param azione generica azione
+     */
 
     public void eseguiAzione(Azione azione){
         if(azione==null) throw new NullPointerException("L'azione non può essere nulla");
         azione.esegui(falconiere.getFalco());
     }
+
+    /**
+     * Metodo che grazie al generatoreMissioni genera una nuova missione impostandola come
+     * missioneCorrente
+     */
     public void iniziaMissione(){
         missioneCorrente = generatoreMissioni.generaMissione();
     }
+
+    /**
+     * Metodo che conclude la missione se è stata completata
+     * Incrementa le missioniGiocate dal Falconiere
+     */
 
     public void concludiMissione() {
         if(missioneCorrente.isCompletata()) falconiere.incrementaMissioniCompletate();
         missioniGiocate++;
     }
+
+    /**
+     * Metodo che affrontaCaccia appoggiandosi a valutatoreCaccia
+     * incrementa le statistiche del falconiere (predePerse, predeCatturate)
+     * in base all' esito della caccia
+     * modifica le statistiche del falco a fine caccia
+     *
+     * @param preda che si sta cacciando
+     * @return un boolean successo che indica se la missione è stata vinta (true) o persa (false)
+     */
 
     public boolean affrontaCaccia(Preda preda) {
         boolean successo = valutatoreCaccia.valutaCaccia(falconiere.getFalco(), preda);
@@ -81,6 +114,12 @@ public class GameControl {
         return successo;
     }
 
+    /**
+     * Metodo per aggiornare le statistiche del falco a fine di ogni caccia
+     * @param successo dell'ultima caccia inidica se vinta o persa
+     * @param preda cacciata, tramite i quali valori di fame generata, ed energia richiesta
+     *              verranno modificate le stats del falco
+     */
     private void aggiornaStatsFalco(boolean successo, Preda preda){
         Falco falco = falconiere.getFalco();
         falco.diminuisciEnergia(preda.getEnergiaRichiesta());
@@ -94,13 +133,28 @@ public class GameControl {
 
     //PARTITA
 
+    /**
+     * Metodo giocatorePerso
+     * @return true se il giocatore ha perso più prede di quelle minime necessarie per vincere
+     */
+
     public boolean giocatorePerso(){
         return falconiere.getPredePerse()>= PREDE_NECESSARIE;
     }
 
+    /**
+     * Metodo che indica se il falconiere ha vinto
+     * @return true se il falconiere ha vinto
+     */
+
     public boolean giocatoreVincitore(){
         return falconiere.getMissioniCompletate() >= MISSIONI_NECESSARIE;
     }
+
+    /**
+     * metodo che permette al termine della partita di salvare il punteggio
+     * nella calssifica finale
+     */
 
     public void terminaPartita(){
         if(giocatoreVincitore()) {
@@ -122,6 +176,7 @@ public class GameControl {
     public int getMissioniGiocate() {
         return missioniGiocate;
     }
+
     /**
      * Espone la classifica (i migliori punteggi salvati) alla GUI,
      * senza che questa debba accedere direttamente alla persistence.

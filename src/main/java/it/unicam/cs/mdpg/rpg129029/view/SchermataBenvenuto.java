@@ -17,8 +17,8 @@ import javafx.stage.Stage;
 
 /**
  * Schermata 1: schermata di benvenuto.
- * Non contiene alcuna logica di gioco: si limita a raccogliere il nome
- * del falconiere e a passarlo a {@link GameControl#creaFalconiere(String)}.
+ * Non contiene alcuna logica di gioco: raccoglie il nome
+ * del falconiere e lo passa a {@link GameControl#creaFalconiere(String)}.
  */
 public final class SchermataBenvenuto {
 
