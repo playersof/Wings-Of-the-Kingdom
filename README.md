@@ -1,6 +1,6 @@
 # 📌 Wings of the kingdom
 
-Wings of the kingdom è un GDR che permette al giocatore di mettersi nei panni di un falconiere che deve affrontare missioni con il suo falco. Ogni scelta che prenderà prima di un combattimento è fondamentale per determinare l'esito della partita
+Wings of the kingdom è un GDR che permette al giocatore di mettersi nei panni di un falconiere che deve affrontare missioni con il suo falco. Ogni scelta che prenderà prima di un combattimento sarà fondamentale per determinare l'esito della partita
 
 ---
 
