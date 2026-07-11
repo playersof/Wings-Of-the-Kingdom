@@ -53,7 +53,7 @@ public final class SchermataFineMissione {
         pulsanteContinua.setFont(Fonts.testo(20));
         pulsanteContinua.getStyleClass().add("pulsante-pixel");
         pulsanteContinua.setOnAction(evento -> {
-            boolean partitaProsegue = controller.getMissioniGiocate() < 5 && !controller.giocatorePerso();
+            boolean partitaProsegue = controller.getMissioniGiocate() < controller.getMissioniTotali() && !controller.giocatorePerso();
             if (partitaProsegue) {
                 SchermataMissione.mostra(stage, controller);
             } else {

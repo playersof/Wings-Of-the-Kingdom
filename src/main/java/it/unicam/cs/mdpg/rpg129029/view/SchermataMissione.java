@@ -69,7 +69,7 @@ public final class SchermataMissione {
         radice.getStyleClass().add("sfondo-gioco");
         radice.setPadding(new Insets(25));
 
-        Label titolo = new Label("Missione " + (controller.getMissioniGiocate() + 1) + " di 5");
+        Label titolo = new Label("Missione " + (controller.getMissioniGiocate() + 1) + " di"+ controller.getMissioniTotali());
         titolo.setFont(Fonts.titolo(20));
         titolo.getStyleClass().add("titolo-sezione");
         BorderPane.setAlignment(titolo, Pos.TOP_CENTER);

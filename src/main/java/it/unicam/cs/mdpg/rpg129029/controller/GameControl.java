@@ -25,6 +25,7 @@ public class GameControl {
     private Falconiere falconiere;
     private Missione missioneCorrente;
     private static final int MISSIONI_NECESSARIE = 3;
+    private static final int MISSIONI_TOTALI = 5;
     private static final int PREDE_NECESSARIE = 5;
     private final GeneratoreMissioniCasuali generatoreMissioni;
     private final ValutatoreCaccia valutatoreCaccia;
@@ -178,6 +179,8 @@ public class GameControl {
     public int getMissioniGiocate() {
         return missioniGiocate;
     }
+
+    public int getMissioniTotali() { return MISSIONI_TOTALI; }
 
     /**
      * Espone la classifica (i migliori punteggi salvati) alla GUI,
