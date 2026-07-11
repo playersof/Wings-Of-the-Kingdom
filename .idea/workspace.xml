@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Update:&#10;- Modifica condizioni di sconfitta nel gioco, aggiunto che se il falco raggiunge 100 di fame o 0 energia la partita è persa.">
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Fix:&#10;- Aggiunta costante MISSIONI_TOTALI per maggiore estendibilità">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFineMissione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFineMissione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataMissione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataMissione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/classifica.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/classifica.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFinePartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFinePartita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,14 +348,21 @@
       <option name="project" value="LOCAL" />
       <updated>1783769033026</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fix:&#10;- Aggiunta costante MISSIONI_TOTALI per maggiore estendibilità">
+      <option name="closed" value="true" />
+      <created>1783773958350</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1783773958350</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creazione delle classi principali per il gioco (Astratte e non):&#10;- Falco (con Pellegrino, Astore ed Harris)&#10;- Preda (con Quaglia, Coniglio, Volpe, Anatra)&#10;- Missione&#10;- Falconiere" />
     <MESSAGE value="Update:&#10;Modificate classi Falconiere e Missione, aggiunta classe Punteggio per poter salvare a fine partita il punteggio e visualizzare una classifica dei migliori 5 giocatori" />
     <MESSAGE value="Update: modificate statistiche delle prede per la caccia, scrittura dei metodi per la classe Falco" />
     <MESSAGE value="Update &amp; Fix:&#10;- Modificate classi Falconiere rivedendo equals e hashcode&#10;- Implementata classe Missione&#10;- Implementato costruttore e getter della classe Preda" />
@@ -381,7 +387,8 @@
     <MESSAGE value="Fix:&#10;- problema building progetto fixato eliminando include superfluo" />
     <MESSAGE value="Update:&#10;- terminata documentazione Javadoc" />
     <MESSAGE value="Update:&#10;- Modifica condizioni di sconfitta nel gioco, aggiunto che se il falco raggiunge 100 di fame o 0 energia la partita è persa." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update:&#10;- Modifica condizioni di sconfitta nel gioco, aggiunto che se il falco raggiunge 100 di fame o 0 energia la partita è persa." />
+    <MESSAGE value="Fix:&#10;- Aggiunta costante MISSIONI_TOTALI per maggiore estendibilità" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix:&#10;- Aggiunta costante MISSIONI_TOTALI per maggiore estendibilità" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

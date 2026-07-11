@@ -124,7 +124,7 @@ public final class SchermataFinePartita {
         Label labelPrede = new Label(punteggio.getPredeCatturate() + " prede");
         labelPrede.setFont(Fonts.testo(18));
         labelPrede.getStyleClass().add("testo-pergamena");
-        labelNome.setPrefWidth(100);
+        labelPrede.setPrefWidth(100);
         labelPrede.setMinWidth(Region.USE_PREF_SIZE);
 
 
