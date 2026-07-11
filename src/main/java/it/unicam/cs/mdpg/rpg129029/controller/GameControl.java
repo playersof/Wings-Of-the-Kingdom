@@ -136,10 +136,12 @@ public class GameControl {
     /**
      * Metodo giocatorePerso
      * @return true se il giocatore ha perso più prede di quelle minime necessarie per vincere
+     * o se il falco ha troppa fame
      */
 
     public boolean giocatorePerso(){
-        return falconiere.getPredePerse()>= PREDE_NECESSARIE;
+        return falconiere.getPredePerse()>= PREDE_NECESSARIE
+                || falconiere.getFalco().haTroppaFame();
     }
 
     /**
