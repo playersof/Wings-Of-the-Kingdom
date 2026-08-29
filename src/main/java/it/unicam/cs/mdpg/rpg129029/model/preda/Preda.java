@@ -7,23 +7,22 @@ package it.unicam.cs.mdpg.rpg129029.model.preda;
  */
 
 public abstract class Preda {
-    private String nome;
-    private final int difficolta;
-    private final int energiaRichiesta;
-    private final int fameGenerata;
+    private final TipoPreda tipo;
 
-    public Preda (String nome, int difficolta, int energia, int fame){
-        this.nome = nome;
-        this.difficolta = difficolta;
-        this.energiaRichiesta = energia;
-        this.fameGenerata= fame;
+    public Preda (TipoPreda tipo){
+        if(tipo == null) throw new NullPointerException("il tipo non può essere nullo");
+        this.tipo = tipo;
     }
 
-    public String getNome() { return nome; }
+    public String getNome() { return tipo.getNomeVisualizzato(); }
 
-    public int getDifficolta() { return difficolta; }
+    public int getDifficolta() { return tipo.getDifficolta(); }
 
-    public int getEnergiaRichiesta() { return energiaRichiesta; }
+    public int getEnergiaRichiesta() { return tipo.getEnergiaRichiesta(); }
 
-    public int getFameGenerata() { return fameGenerata; }
+    public int getFameGenerata() { return tipo.getFameGenerata();}
+
+    public TipoPreda getTipo() {
+        return tipo;
+    }
 }

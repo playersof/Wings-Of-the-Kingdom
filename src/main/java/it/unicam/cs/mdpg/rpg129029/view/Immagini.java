@@ -1,6 +1,7 @@
 package it.unicam.cs.mdpg.rpg129029.view;
 
 import it.unicam.cs.mdpg.rpg129029.model.falco.TipoFalco;
+import it.unicam.cs.mdpg.rpg129029.model.preda.TipoPreda;
 import javafx.scene.image.Image;
 
 import java.io.InputStream;
@@ -10,12 +11,6 @@ import java.io.InputStream;
  * così da funzionare correttamente anche dopo il packaging dell'app JavaFX.
  */
 public final class Immagini {
-
-    public static final String PREDA_VOLPE = "/Prede/Volpe.png";
-    public static final String PREDA_CONIGLIO = "/Prede/Coniglio.png";
-    public static final String PREDA_ANATRA = "/Prede/Anatra.png";
-    public static final String PREDA_QUAGLIA = "/Prede/Quaglia.png";
-
     /**
      * Sfondo della schermata di benvenuto.
      *
@@ -53,12 +48,10 @@ public final class Immagini {
 
     /** Associa il nome della preda (Preda.getNome()) al file immagine corrispondente. */
     public static String immaginePreda(String nomePreda) {
-        return switch (nomePreda) {
-            case "Volpe" -> PREDA_VOLPE;
-            case "Coniglio" -> PREDA_CONIGLIO;
-            case "Anatra" -> PREDA_ANATRA;
-            case "Quaglia" -> PREDA_QUAGLIA;
-            default -> null;
-        };
+        try{
+            return TipoPreda.valueOf(nomePreda.toUpperCase()).getPercorsoImmagine();
+        }catch (IllegalArgumentException | NullPointerException e){
+            return null;
+        }
     }
 }

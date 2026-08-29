@@ -20,7 +20,7 @@ public class GeneratoreMissioniCasuali implements GeneratorePredaCasuale{
     public Missione generaMissione() {
         List<Preda> lista = new ArrayList<>();
         for (int i = 0; i < Missione.getNumPredePerMissione() ; i++) {
-            int indicePreda= generatoreInt.nextInt(0,4);
+            int indicePreda= generatoreInt.nextInt(0,TipoPreda.values().length);
             Preda preda = creaPreda(indicePreda);
             lista.add(preda);
         }
@@ -29,13 +29,19 @@ public class GeneratoreMissioniCasuali implements GeneratorePredaCasuale{
     }
 
     @Override
+
     public Preda creaPreda(int ind){
-        return switch (ind) {
-            case 0 -> new Anatra();
-            case 1 -> new Coniglio();
-            case 2 -> new Quaglia();
-            case 3 -> new Volpe();
-            default -> throw new IllegalArgumentException("preda non valida");
+        TipoPreda[] tipi = TipoPreda.values();
+        if(ind < 0 || ind >= tipi.length) throw new IllegalArgumentException("preda non valida");
+        return creaPreda(tipi[ind]);
+    }
+
+    private Preda creaPreda(TipoPreda tipo){
+        return switch (tipo) {
+            case ANATRA -> new Anatra();
+            case CONIGLIO -> new Coniglio();
+            case QUAGLIA -> new Quaglia();
+            case VOLPE -> new Volpe();
         };
     }
 }

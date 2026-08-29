@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="refactor: centralizza i dati dei tipi di falco in un enum TipoFalco&#10;&#10;- creato TipoFalco (nome, statistiche inizili, immagine) per eliminare la duplicazione tra le sottoclassi di Falco, FalcoFactory Immagini e SchermataSceltaFalco&#10;- Falco ora riceve un TipoFalco nel costruttore invece di 4 parametri &#10;- FalcoFactory e Immagini derivano da TipoFalco invece di usare switch su stringhe duplicate&#10;- SchermataSceltaFalco itera su TipoFalco.values() invece di un array di dati copiati a mano&#10;- corretto anche haTroppaFame() in Falco per usare la costante MAX_STAT invece del valore 100 scritto a mano">
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" afterDir="false" />
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="refactor: create costanti per numeri ripeturi nominate&#10;- GameControl: BONUS_ADDESTRAMENTO_CACCIA_RIUSCITA e RIDUZIONE_FAME_CACCIA_RIUSCITA al posto dei valori 10 e 3 scritti a mano&#10;- ValutatoreCaccia : AMPIEZZA_FATTORE_CASUALE e OFFSET_VALORE_CASUALE al posto della formula random.nextInt(11) - 5, con commento che ne spiega il significato">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/TipoPreda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Anatra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Anatra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Coniglio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Coniglio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Preda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Preda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Quaglia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Quaglia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Volpe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/preda/Volpe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/GeneratoreMissioniCasuali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/GeneratoreMissioniCasuali.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Immagini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Immagini.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -387,14 +394,21 @@
       <option name="project" value="LOCAL" />
       <updated>1788002724053</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="refactor: create costanti per numeri ripeturi nominate&#10;- GameControl: BONUS_ADDESTRAMENTO_CACCIA_RIUSCITA e RIDUZIONE_FAME_CACCIA_RIUSCITA al posto dei valori 10 e 3 scritti a mano&#10;- ValutatoreCaccia : AMPIEZZA_FATTORE_CASUALE e OFFSET_VALORE_CASUALE al posto della formula random.nextInt(11) - 5, con commento che ne spiega il significato">
+      <option name="closed" value="true" />
+      <created>1788003212497</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1788003212497</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update &amp; Fix:&#10;- Implementata la classe GeneratreMissioniCasuali per permettere al gioco di generare le missioni in maniera randomica &#10;- Inizio implementazione ValutatoreCaccia tramite definizione della formula per il calcolo dell'esito della caccia&#10;- Aggiunta del metodo getNumPredePerMissione su Missione per comodità strutturale" />
     <MESSAGE value="Update &amp; Fix:&#10;- Implementata classe FalcoFactory per la creazione dei falchi ad inizio partita&#10;- Implementata ValutatoreCaccia con metodo valutaCaccia che calcola in base ad una formula l'esito dello scontro" />
     <MESSAGE value="Update:&#10;- Implementata classe GsonProvider.java per garantire la persistenza dei dati&#10;- Implementata la classe Punteggio.java per gestire il salvataggio dei punteggi per creare una classifica dei migliori giocatori &#10;- Implementata interfaccia Repository.java per permettere l'interazione coi dati salvati e il salvataggio di essi tramite metodi base come: salva(), elimina(), trovatutti()" />
     <MESSAGE value="Update &amp; Fix:&#10;- Implementa ClassificaRepositoryFile &#10;- Fix di id Falconiere con ID univoco&#10;- continuo implementazione GameControl&#10;- Quasi terminata la parte di Persistency&#10;- Fix classe Punteggio.java" />
@@ -419,7 +433,8 @@
     <MESSAGE value="Fix:&#10;- uniforma terminazioni di riga a LF su tutto il progetto" />
     <MESSAGE value="Fix:&#10;- GameControl ora riceve GeneratoreMissioniCasuali, ValutatoreCaccia e FalcoFactory tramite il costruttore invece di istanziarli internamente rispettando meglio il principio DIP (SOLID)&#10;- ValutatoreCaccia riceve il random dall'esterno invece di crearselo da solo&#10;- aggiunto GameControl.nuovaPartita() per permettere a SchermataFinePartita di avviare una nuova partita senza conoscere le classi concrete di persistence e service (Prima istanziava direttamente ClassificaRepositoryFile)" />
     <MESSAGE value="refactor: centralizza i dati dei tipi di falco in un enum TipoFalco&#10;&#10;- creato TipoFalco (nome, statistiche inizili, immagine) per eliminare la duplicazione tra le sottoclassi di Falco, FalcoFactory Immagini e SchermataSceltaFalco&#10;- Falco ora riceve un TipoFalco nel costruttore invece di 4 parametri &#10;- FalcoFactory e Immagini derivano da TipoFalco invece di usare switch su stringhe duplicate&#10;- SchermataSceltaFalco itera su TipoFalco.values() invece di un array di dati copiati a mano&#10;- corretto anche haTroppaFame() in Falco per usare la costante MAX_STAT invece del valore 100 scritto a mano" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: centralizza i dati dei tipi di falco in un enum TipoFalco&#10;&#10;- creato TipoFalco (nome, statistiche inizili, immagine) per eliminare la duplicazione tra le sottoclassi di Falco, FalcoFactory Immagini e SchermataSceltaFalco&#10;- Falco ora riceve un TipoFalco nel costruttore invece di 4 parametri &#10;- FalcoFactory e Immagini derivano da TipoFalco invece di usare switch su stringhe duplicate&#10;- SchermataSceltaFalco itera su TipoFalco.values() invece di un array di dati copiati a mano&#10;- corretto anche haTroppaFame() in Falco per usare la costante MAX_STAT invece del valore 100 scritto a mano" />
+    <MESSAGE value="refactor: create costanti per numeri ripeturi nominate&#10;- GameControl: BONUS_ADDESTRAMENTO_CACCIA_RIUSCITA e RIDUZIONE_FAME_CACCIA_RIUSCITA al posto dei valori 10 e 3 scritti a mano&#10;- ValutatoreCaccia : AMPIEZZA_FATTORE_CASUALE e OFFSET_VALORE_CASUALE al posto della formula random.nextInt(11) - 5, con commento che ne spiega il significato" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: create costanti per numeri ripeturi nominate&#10;- GameControl: BONUS_ADDESTRAMENTO_CACCIA_RIUSCITA e RIDUZIONE_FAME_CACCIA_RIUSCITA al posto dei valori 10 e 3 scritti a mano&#10;- ValutatoreCaccia : AMPIEZZA_FATTORE_CASUALE e OFFSET_VALORE_CASUALE al posto della formula random.nextInt(11) - 5, con commento che ne spiega il significato" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
