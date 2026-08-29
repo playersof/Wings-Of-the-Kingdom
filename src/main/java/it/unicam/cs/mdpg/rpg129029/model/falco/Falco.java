@@ -6,7 +6,7 @@ package it.unicam.cs.mdpg.rpg129029.model.falco;
  * intraprese dal giocatore (falconiere) prima di ogni missione
  */
 public abstract class Falco {
-    private String nome;
+    private final TipoFalco tipo;
     private int fame;
     private int energia;
     private int addestramento;
@@ -14,11 +14,12 @@ public abstract class Falco {
     private static final int MIN_STAT = 0;
     private static final int MIN_ENERGIA_CACCIA = 30;
 
-    public Falco (String nome, int fame, int energia, int addestramento){
-        this.nome = nome;
-        this.fame = fame;
-        this.energia = energia;
-        this.addestramento = addestramento;
+    protected Falco (TipoFalco tipo){
+        if(tipo == null) throw new NullPointerException("Il tipo non può essere nullo");
+        this.tipo = tipo;
+        this.fame = tipo.getFameIniziale();
+        this.energia = tipo.getEnergiaIniziale();
+        this.addestramento = tipo.getAddestramentroIniziale();
     }
 
     public int getEnergia() {
@@ -34,7 +35,7 @@ public abstract class Falco {
     }
 
     public String getNome() {
-        return nome;
+        return tipo.getNomeVisualizzato();
     }
 
     public void diminuisciEnergia(int valore) {
@@ -64,5 +65,5 @@ public abstract class Falco {
     public boolean haEnergia() {
         return energia >= MIN_ENERGIA_CACCIA;
     }
-    public boolean haTroppaFame() { return fame >= 100; }
+    public boolean haTroppaFame() { return fame >= MAX_STAT; }
 }

@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Fix:&#10;- uniforma terminazioni di riga a LF su tutto il progetto">
+    <list default="true" id="6b464232-b759-4e73-85f4-0bf1d0c1baf8" name="Changes" comment="Fix:&#10;- GameControl ora riceve GeneratoreMissioniCasuali, ValutatoreCaccia e FalcoFactory tramite il costruttore invece di istanziarli internamente rispettando meglio il principio DIP (SOLID)&#10;- ValutatoreCaccia riceve il random dall'esterno invece di crearselo da solo&#10;- aggiunto GameControl.nuovaPartita() per permettere a SchermataFinePartita di avviare una nuova partita senza conoscere le classi concrete di persistence e service (Prima istanziava direttamente ClassificaRepositoryFile)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/TipoFalco.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/GameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/app/GameApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/controller/GameControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/ValutatoreCaccia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFinePartita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataFinePartita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/classifica.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/classifica.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Astore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Astore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Falco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Harris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Harris.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Pellegrino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/falco/Pellegrino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/FalcoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/model/service/FalcoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Immagini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/Immagini.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataSceltaFalco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mdpg/rpg129029/view/SchermataSceltaFalco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +49,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -374,14 +380,21 @@
       <option name="project" value="LOCAL" />
       <updated>1783790344588</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Fix:&#10;- GameControl ora riceve GeneratoreMissioniCasuali, ValutatoreCaccia e FalcoFactory tramite il costruttore invece di istanziarli internamente rispettando meglio il principio DIP (SOLID)&#10;- ValutatoreCaccia riceve il random dall'esterno invece di crearselo da solo&#10;- aggiunto GameControl.nuovaPartita() per permettere a SchermataFinePartita di avviare una nuova partita senza conoscere le classi concrete di persistence e service (Prima istanziava direttamente ClassificaRepositoryFile)">
+      <option name="closed" value="true" />
+      <created>1787999923768</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1787999923779</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update &amp; Fix:&#10;- Modificate classi Falconiere rivedendo equals e hashcode&#10;- Implementata classe Missione&#10;- Implementato costruttore e getter della classe Preda" />
     <MESSAGE value="Update:&#10;- Implementata l'interfaccia Azione per l'estendibilità del codice (O/C principle)&#10;- Inizio implementazione GameControl" />
     <MESSAGE value="Update &amp; Fix:&#10;- Implementata la classe GeneratreMissioniCasuali per permettere al gioco di generare le missioni in maniera randomica &#10;- Inizio implementazione ValutatoreCaccia tramite definizione della formula per il calcolo dell'esito della caccia&#10;- Aggiunta del metodo getNumPredePerMissione su Missione per comodità strutturale" />
     <MESSAGE value="Update &amp; Fix:&#10;- Implementata classe FalcoFactory per la creazione dei falchi ad inizio partita&#10;- Implementata ValutatoreCaccia con metodo valutaCaccia che calcola in base ad una formula l'esito dello scontro" />
@@ -406,7 +419,8 @@
     <MESSAGE value="Fix:&#10;- Aggiunta costante MISSIONI_TOTALI per maggiore estendibilità" />
     <MESSAGE value="Fix:&#10;- Corretto Bug sulla classifica finale che troncava i nomi&#10;- Classifica ripulita" />
     <MESSAGE value="Fix:&#10;- uniforma terminazioni di riga a LF su tutto il progetto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix:&#10;- uniforma terminazioni di riga a LF su tutto il progetto" />
+    <MESSAGE value="Fix:&#10;- GameControl ora riceve GeneratoreMissioniCasuali, ValutatoreCaccia e FalcoFactory tramite il costruttore invece di istanziarli internamente rispettando meglio il principio DIP (SOLID)&#10;- ValutatoreCaccia riceve il random dall'esterno invece di crearselo da solo&#10;- aggiunto GameControl.nuovaPartita() per permettere a SchermataFinePartita di avviare una nuova partita senza conoscere le classi concrete di persistence e service (Prima istanziava direttamente ClassificaRepositoryFile)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix:&#10;- GameControl ora riceve GeneratoreMissioniCasuali, ValutatoreCaccia e FalcoFactory tramite il costruttore invece di istanziarli internamente rispettando meglio il principio DIP (SOLID)&#10;- ValutatoreCaccia riceve il random dall'esterno invece di crearselo da solo&#10;- aggiunto GameControl.nuovaPartita() per permettere a SchermataFinePartita di avviare una nuova partita senza conoscere le classi concrete di persistence e service (Prima istanziava direttamente ClassificaRepositoryFile)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

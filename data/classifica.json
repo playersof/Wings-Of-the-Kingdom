@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "nomeFalconiere": "aaaaaa",
+    "missioniCompletate": 5,
+    "predeCatturate": 10
+  },
+  {
+    "nomeFalconiere": "sofiii",
+    "missioniCompletate": 4,
+    "predeCatturate": 9
+  }
+]

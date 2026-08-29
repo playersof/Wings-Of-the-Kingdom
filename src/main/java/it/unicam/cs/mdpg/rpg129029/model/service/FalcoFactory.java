@@ -4,6 +4,7 @@ import it.unicam.cs.mdpg.rpg129029.model.falco.Astore;
 import it.unicam.cs.mdpg.rpg129029.model.falco.Falco;
 import it.unicam.cs.mdpg.rpg129029.model.falco.Harris;
 import it.unicam.cs.mdpg.rpg129029.model.falco.Pellegrino;
+import it.unicam.cs.mdpg.rpg129029.model.falco.TipoFalco;
 
 
 /**
@@ -21,11 +22,16 @@ public class FalcoFactory {
      */
     public Falco creaFalco (String tipo) {
         if(tipo == null || tipo.isBlank()) throw new IllegalArgumentException("il tipo deve essere valido");
-        return switch (tipo){
-            case "Pellegrino" -> new Pellegrino();
-            case "Harris" -> new Harris();
-            case "Astore" -> new Astore();
-            default -> throw new IllegalArgumentException("il tipo di falco non esiste");
+        TipoFalco tipoFalco;
+        try{
+            tipoFalco = TipoFalco.valueOf(tipo.toUpperCase());
+        }catch (IllegalArgumentException e){
+            throw new IllegalArgumentException("il tipo di falco non esiste");
+        }
+        return switch (tipoFalco){
+            case PELLEGRINO -> new Pellegrino();
+            case HARRIS -> new Harris();
+            case ASTORE -> new Astore();
         };
     }
 }

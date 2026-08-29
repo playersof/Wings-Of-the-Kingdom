@@ -1,6 +1,7 @@
 package it.unicam.cs.mdpg.rpg129029.view;
 
 import it.unicam.cs.mdpg.rpg129029.controller.GameControl;
+import it.unicam.cs.mdpg.rpg129029.model.falco.TipoFalco;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -23,17 +24,6 @@ import javafx.stage.Stage;
  */
 public final class SchermataSceltaFalco {
 
-    /** tipo, immagine, fame iniziale, energia iniziale, addestramento iniziale, descrizione */
-    private record OpzioneFalco(String tipo, String nomeVisualizzato, String immagine,
-                                 int fame, int energia, int addestramento) {
-    }
-
-    private static final OpzioneFalco[] OPZIONI = {
-            new OpzioneFalco("Pellegrino", "Pellegrino", Immagini.FALCO_PELLEGRINO, 30, 80, 40),
-            new OpzioneFalco("Harris", "Poiana di Harris", Immagini.FALCO_HARRIS, 35, 90, 30),
-            new OpzioneFalco("Astore", "Astore", Immagini.FALCO_ASTORE, 40, 70, 50),
-    };
-
     private SchermataSceltaFalco() {
     }
 
@@ -52,8 +42,8 @@ public final class SchermataSceltaFalco {
 
         HBox riquadri = new HBox(25);
         riquadri.setAlignment(Pos.CENTER);
-        for (OpzioneFalco opzione : OPZIONI) {
-            riquadri.getChildren().add(costruisciRiquadro(stage, controller, opzione));
+        for (TipoFalco tipo : TipoFalco.values()) {
+            riquadri.getChildren().add(costruisciRiquadro(stage, controller, tipo));
         }
         radice.setCenter(riquadri);
 
@@ -62,7 +52,7 @@ public final class SchermataSceltaFalco {
         stage.setScene(scena);
     }
 
-    private static VBox costruisciRiquadro(Stage stage, GameControl controller, OpzioneFalco opzione) {
+    private static VBox costruisciRiquadro(Stage stage, GameControl controller, TipoFalco tipo) {
         VBox riquadro = new VBox(10);
         riquadro.getStyleClass().addAll("box-legno", "box-legno-selezionabile");
         riquadro.setAlignment(Pos.TOP_CENTER);
@@ -73,21 +63,21 @@ public final class SchermataSceltaFalco {
         vistaImmagine.setFitWidth(150);
         vistaImmagine.setFitHeight(150);
         vistaImmagine.setPreserveRatio(true);
-        Image immagine = Immagini.carica(opzione.immagine());
+        Image immagine = Immagini.carica(tipo.getPercorsoImmagine());
         if (immagine != null) {
             vistaImmagine.setImage(immagine);
         }
 
-        Label nome = new Label(opzione.nomeVisualizzato());
+        Label nome = new Label(tipo.getNomeVisualizzato());
         nome.setFont(Fonts.titolo(14));
         nome.getStyleClass().add("testo-legno");
         nome.setWrapText(true);
         nome.setTextAlignment(javafx.scene.text.TextAlignment.CENTER);
 
         Label statistiche = new Label(
-                "Fame: " + opzione.fame() + "\n" +
-                        "Energia: " + opzione.energia() + "\n" +
-                        "Addestramento: " + opzione.addestramento()
+                "Fame: " + tipo.getFameIniziale() + "\n" +
+                        "Energia: " + tipo.getEnergiaIniziale() + "\n" +
+                        "Addestramento: " + tipo.getAddestramentroIniziale()
         );
         statistiche.setFont(Fonts.testo(18));
         statistiche.getStyleClass().add("testo-legno");
@@ -98,7 +88,7 @@ public final class SchermataSceltaFalco {
         pulsanteScegli.getStyleClass().add("pulsante-pixel");
         pulsanteScegli.setMaxWidth(Double.MAX_VALUE);
         pulsanteScegli.setOnAction(evento -> {
-            controller.sceltaFalco(opzione.tipo());
+            controller.sceltaFalco(tipo.name());
             SchermataMissione.mostra(stage, controller);
         });
 

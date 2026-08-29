@@ -2,6 +2,6 @@ package it.unicam.cs.mdpg.rpg129029.model.falco;
 
 public class Harris extends Falco {
     public Harris(){
-        super("Poiana di Harris", 35, 90,30);
+        super(TipoFalco.HARRIS);
     }
 }

@@ -1,5 +1,6 @@
 package it.unicam.cs.mdpg.rpg129029.view;
 
+import it.unicam.cs.mdpg.rpg129029.model.falco.TipoFalco;
 import javafx.scene.image.Image;
 
 import java.io.InputStream;
@@ -9,10 +10,6 @@ import java.io.InputStream;
  * così da funzionare correttamente anche dopo il packaging dell'app JavaFX.
  */
 public final class Immagini {
-
-    public static final String FALCO_ASTORE = "/Falchi/Astore.png";
-    public static final String FALCO_PELLEGRINO = "/Falchi/Pellegrino.png";
-    public static final String FALCO_HARRIS = "/Falchi/Harris.png";
 
     public static final String PREDA_VOLPE = "/Prede/Volpe.png";
     public static final String PREDA_CONIGLIO = "/Prede/Coniglio.png";
@@ -47,12 +44,11 @@ public final class Immagini {
 
     /** Associa il nome del tipo di falco (usato da FalcoFactory) al file immagine corrispondente. */
     public static String immagineFalco(String tipoFalco) {
-        return switch (tipoFalco) {
-            case "Astore" -> FALCO_ASTORE;
-            case "Pellegrino" -> FALCO_PELLEGRINO;
-            case "Harris" -> FALCO_HARRIS;
-            default -> null;
-        };
+        try{
+            return TipoFalco.valueOf(tipoFalco.toUpperCase()).getPercorsoImmagine();
+        }catch (IllegalArgumentException | NullPointerException e){
+            return null;
+        }
     }
 
     /** Associa il nome della preda (Preda.getNome()) al file immagine corrispondente. */
