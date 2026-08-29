@@ -12,7 +12,13 @@ import java.util.Random;
  * che descrive se la caccia ha avuto esito positivo o meno
  */
 public class ValutatoreCaccia {
-    final Random random = new Random();
+    private final Random random;
+
+    public ValutatoreCaccia(Random random){
+        if(random == null) throw new NullPointerException("il random non può essere nullo");
+        this.random = random;
+    }
+
     public boolean valutaCaccia(Falco falco, Preda preda){
         if(!falco.haEnergia() || falco.haTroppaFame()) return false;
         int fattoreCasuale = random.nextInt(11) -5;

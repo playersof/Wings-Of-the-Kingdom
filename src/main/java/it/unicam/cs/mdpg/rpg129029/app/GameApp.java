@@ -1,11 +1,16 @@
 package it.unicam.cs.mdpg.rpg129029.app;
 
 import it.unicam.cs.mdpg.rpg129029.controller.GameControl;
+import it.unicam.cs.mdpg.rpg129029.model.service.FalcoFactory;
+import it.unicam.cs.mdpg.rpg129029.model.service.GeneratoreMissioniCasuali;
+import it.unicam.cs.mdpg.rpg129029.model.service.ValutatoreCaccia;
 import it.unicam.cs.mdpg.rpg129029.persistence.file.ClassificaRepositoryFile;
 import it.unicam.cs.mdpg.rpg129029.view.MusicaSottofondo;
 import it.unicam.cs.mdpg.rpg129029.view.SchermataBenvenuto;
 import javafx.application.Application;
 import javafx.stage.Stage;
+
+import java.util.Random;
 
 /**
  * Punto d'ingresso JavaFX
@@ -19,7 +24,11 @@ public class GameApp extends Application {
     @Override
     public void start(Stage stagePrincipale) {
         MusicaSottofondo.avvia();
-        GameControl gameControl = new GameControl(new ClassificaRepositoryFile(PERCORSO_CLASSIFICA));
+        GameControl gameControl = new GameControl(
+                new ClassificaRepositoryFile(PERCORSO_CLASSIFICA),
+                new GeneratoreMissioniCasuali(),
+                new ValutatoreCaccia(new Random()),
+                new FalcoFactory());
 
         stagePrincipale.setTitle("Wings of the Kingdom");
         stagePrincipale.setResizable(true);

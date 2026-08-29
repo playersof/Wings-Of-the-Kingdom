@@ -34,12 +34,30 @@ public class GameControl {
     private final ClassificaRepository classificaRepository;
 
 
-    public GameControl(ClassificaRepository classificaRepository) {
+    public GameControl(ClassificaRepository classificaRepository,
+                       GeneratoreMissioniCasuali generatoreMissioni,
+                       ValutatoreCaccia valutatoreCaccia,
+                       FalcoFactory falcoFactory) {
         if (classificaRepository == null) throw new NullPointerException("il parametro passato non può essere nullo");
+        if (generatoreMissioni == null) throw new NullPointerException("il generatoreMissioni non può essere nullo");
+        if (valutatoreCaccia == null) throw new NullPointerException("il valutatoreCaccia non può essere nullo");
+        if (falcoFactory == null) throw new NullPointerException("il falcoFactory non può essere nullo");
         this.classificaRepository = classificaRepository;
-        this.generatoreMissioni = new GeneratoreMissioniCasuali();
-        this.valutatoreCaccia = new ValutatoreCaccia();
-        this.falcoFactory = new FalcoFactory();
+        this.generatoreMissioni = generatoreMissioni;
+        this.valutatoreCaccia = valutatoreCaccia;
+        this.falcoFactory = falcoFactory;
+    }
+
+    /**
+     * crea un nuovo GameControl per iniziare una nuova partita
+     * riusando le stesse dipendenze di questo controller.
+     * Permette alla GUI di avviare una nuova partita
+     * senza dover conoscere le classi concrete usate internamente
+     * da GameControl.
+     * @return un nuovo GameControl
+     */
+    public GameControl nuovaPartita(){
+        return new GameControl(this.classificaRepository, this.generatoreMissioni, this.valutatoreCaccia,this.falcoFactory);
     }
 
     /**

@@ -1,9 +1,7 @@
 package it.unicam.cs.mdpg.rpg129029.view;
 
-import it.unicam.cs.mdpg.rpg129029.app.GameApp;
 import it.unicam.cs.mdpg.rpg129029.controller.GameControl;
 import it.unicam.cs.mdpg.rpg129029.model.Punteggio;
-import it.unicam.cs.mdpg.rpg129029.persistence.file.ClassificaRepositoryFile;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -14,6 +12,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * Schermata 5: fine partita, con classifica dei migliori punteggi.
@@ -43,7 +42,7 @@ public final class SchermataFinePartita {
         pulsanteNuovaPartita.setFont(Fonts.testo(20));
         pulsanteNuovaPartita.getStyleClass().add("pulsante-oro");
         pulsanteNuovaPartita.setOnAction(evento -> {
-            GameControl nuovoController = new GameControl(new ClassificaRepositoryFile(GameApp.PERCORSO_CLASSIFICA));
+            GameControl nuovoController = controller.nuovaPartita();
             SchermataBenvenuto.mostra(stage, nuovoController);
         });
 
