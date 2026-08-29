@@ -27,6 +27,8 @@ public class GameControl {
     private static final int MISSIONI_NECESSARIE = 3;
     private static final int MISSIONI_TOTALI = 5;
     private static final int PREDE_NECESSARIE = 5;
+    private static final int BONUS_ADDESTRAMENTO_CACCIA_RIUSCITA = 10;
+    private static final int RIDUZIONE_FAME_CACCIA_RIUSCITA = 3;
     private final GeneratoreMissioniCasuali generatoreMissioni;
     private final ValutatoreCaccia valutatoreCaccia;
     private final FalcoFactory falcoFactory;
@@ -143,8 +145,8 @@ public class GameControl {
         Falco falco = falconiere.getFalco();
         falco.diminuisciEnergia(preda.getEnergiaRichiesta());
         if(successo){
-            falco.aumentaAddestramento(10);
-            falco.diminuisciFame(3);
+            falco.aumentaAddestramento(BONUS_ADDESTRAMENTO_CACCIA_RIUSCITA);
+            falco.diminuisciFame(RIDUZIONE_FAME_CACCIA_RIUSCITA);
         }
         else falco.aumentaFame(preda.getFameGenerata());
     }
